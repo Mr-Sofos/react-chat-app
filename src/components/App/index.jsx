@@ -1,7 +1,16 @@
-import React from "react";
+import Chats from '../Chats';
+import Messages from '../Messages';
+import MyProfile from '../MyProfile';
+import style from './../App/style.module.css'
 
-function App(props) {
-  return <div></div>;
+function App() {
+  return (
+    <div className={style.appWrapper}>
+      <Chats />
+      <Messages />
+      <MyProfile />
+    </div>
+  );
 }
 
 export default App;

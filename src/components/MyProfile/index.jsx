@@ -1,9 +1,7 @@
-import React from 'react';
+import style from './style.module.css';
 
-function MyProfile (props) {
-  return (
-    <div></div>
-  );
+function MyProfile() {
+  return <div className={style.myProfile}></div>;
 }
 
 export default MyProfile;
