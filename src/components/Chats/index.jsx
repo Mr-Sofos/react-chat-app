@@ -6,6 +6,7 @@ import { loadAvatars, loadContacts } from '../../redux/ducks/contacts';
 import Avatar from '../App/Avatar/Avatar';
 
 function Chats() {
+
   const contacts = useSelector(state => state.contacts.items);
   const avatars = useSelector(state => state.contacts.avatars)
   const dispatch = useDispatch();
@@ -14,8 +15,7 @@ function Chats() {
   useEffect(() => {
     dispatch(loadContacts())
   }, [])
-
-
+  
   return (
     <div className={style.chats}>
       <div className={style.search}>
@@ -31,7 +31,6 @@ function Chats() {
           <div className={style.fullName}>{contact.fullname}</div>
         </div>
       })}
-
     </div>
   );
 }
