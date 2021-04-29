@@ -1,7 +1,7 @@
 import Chats from '../Chats';
 import Messages from '../Messages';
 import MyProfile from '../MyProfile';
-import style from './../App/style.module.css'
+import style from './../App/style.module.css';
 
 function App() {
   return (
