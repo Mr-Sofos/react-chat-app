@@ -9,7 +9,9 @@ function Messages() {
       <input type='text'/>
     </div>
     <div></div>
-    <div></div>
+    <div>
+
+    </div>
   </div>;
 }
 
