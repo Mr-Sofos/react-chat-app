@@ -1,5 +1,5 @@
-import style from './style.module.css';
 import { AiOutlineSearch } from 'react-icons/all';
+import style from './style.module.css';
 
 function Chats() {
   return <div className={style.chats}>
