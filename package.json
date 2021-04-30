@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettify": "prettier --write ./src"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +47,8 @@
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react-icons": "^4.2.0"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
