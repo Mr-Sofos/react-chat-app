@@ -1,13 +1,11 @@
 import style from './style.module.css';
 import { AiOutlineSearch } from 'react-icons/all';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-import { loadAvatars, loadContacts } from '../../redux/ducks/contacts';
-import Avatar from '../App/Avatar/Avatar';
+import { useEffect } from 'react';
+import { loadContacts } from '../../redux/ducks/contacts';
 
 function Chats() {
   const contacts = useSelector(state => state.contacts.items);
-  const avatars = useSelector(state => state.contacts.avatars)
   const dispatch = useDispatch();
 
 
