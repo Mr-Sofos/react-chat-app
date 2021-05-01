@@ -6,17 +6,14 @@ import { loadContacts } from '../../redux/ducks/contacts';
 import { Route } from 'react-router-dom';
 import Contact from './contact';
 
-
 function Chats() {
-
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector((state) => state.contacts.items);
   const dispatch = useDispatch();
 
-
   useEffect(() => {
-    dispatch(loadContacts())
-  }, [])
-  
+    dispatch(loadContacts());
+  }, []);
+
   return (
     <Route path="/:_id?">
       <div className={style.chats}>
@@ -24,9 +21,7 @@ function Chats() {
         <div className="icon">
           <AiOutlineSearch />
         </div>
-        <input type="text"
-               placeholder="Search contact"
-        />
+        <input type="text" placeholder="Search contact" />
       </div>
       <div>
         {contacts.map((contact) => {

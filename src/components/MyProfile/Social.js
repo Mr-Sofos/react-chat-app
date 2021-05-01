@@ -1,16 +1,39 @@
 import React from 'react';
 import style from './style.module.css';
+import {
+  AiOutlineInstagram,
+  AiOutlineTwitter,
+  FaFacebookF,
+} from 'react-icons/all';
 
-function Social(props) {
+function Social({ socials }) {
   return (
-    //Пока что пусто потому что нужно грузить данные с сервера(по клику на чат).
-    //Если что пять сек накину
     <div className={style.profileSocial}>
       <div className={style.headSocial}>Social</div>
       <div className={style.messenger}>
-        <div className={style.instagram}></div>
-        <div className={style.twitter}></div>
-        <div className={style.facebook}></div>
+        <div className={style.wrapMessenger}>
+          <div className={style.wrapIconsSocial}>
+            <div className={style.IconsImg}>
+              <AiOutlineInstagram />
+            </div>
+            <div className={style.IconsImg}>
+              <AiOutlineTwitter />
+            </div>
+            <div className={style.IconsImg}>
+              <FaFacebookF />
+            </div>
+          </div>
+          <div className={style.loginIconSocial}>
+            {socials &&
+              Object.keys(socials).map((social, index) => {
+                return (
+                  <div className={style.socialNickname} key={index}>
+                    <div>{socials[social]}</div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
     </div>
   );
