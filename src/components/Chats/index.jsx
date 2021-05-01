@@ -17,20 +17,18 @@ function Chats() {
   return (
     <Route path="/:_id?">
       <div className={style.chats}>
-      <div className={style.search}>
-        <div className="icon">
-          <AiOutlineSearch />
+        <div className={style.search}>
+          <div className="icon">
+            <AiOutlineSearch />
+          </div>
+          <input type="text" placeholder="Search contact" />
         </div>
-        <input type="text" placeholder="Search contact" />
+        <div>
+          {contacts.map((contact) => {
+            return <Contact contact={contact} key={contact.id} />;
+          })}
+        </div>
       </div>
-      <div>
-        {contacts.map((contact) => {
-        return (
-          <Contact contact={contact} key={contact.id} />
-        )
-      })}
-      </div>
-    </div>
     </Route>
   );
 }
