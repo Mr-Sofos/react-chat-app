@@ -1,9 +1,10 @@
 import { AiOutlineSearch } from 'react-icons/all';
 import style from './style.module.css';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { loadContacts } from '../../redux/ducks/contacts';
+import { Route } from 'react-router-dom';
+import Contact from './contact';
 
 
 function Chats() {
@@ -17,7 +18,8 @@ function Chats() {
   }, [])
   
   return (
-    <div className={style.chats}>
+    <Route path="/:_id?">
+      <div className={style.chats}>
       <div className={style.search}>
         <div className="icon">
           <AiOutlineSearch />
@@ -26,12 +28,15 @@ function Chats() {
                placeholder="Search contact"
         />
       </div>
-      {contacts.map((contact) => {
-        return <div className={style.contact}>
-          <div className={style.fullName}>{contact.fullname}</div>
-        </div>
+      <div>
+        {contacts.map((contact) => {
+        return (
+          <Contact contact={contact} key={contact.id} />
+        )
       })}
+      </div>
     </div>
+    </Route>
   );
 }
 
