@@ -3,7 +3,9 @@ import style from './style.module.css';
 import { Link, useParams } from 'react-router-dom';
 
 function Contact(props) {
-  const openContactId = useParams()._id;
+  
+  const openContactId = useParams()._id
+
   return (
     <div
       className={`${style.contact}
