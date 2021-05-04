@@ -10,7 +10,33 @@
 
 .profile {
   width: 300px;
-  padding: 0 30px;
+  padding: 50px 50px 0 30px;
+}
+.buttonProfile {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 25px;
+  border: 0;
+  border-left: 1px solid lavender;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.letterButtonProfile div {
+  font-size: 20px;
+  padding-bottom: 6px;
+}
+.profile-enter-active {
+}
+.profile-enter-done {
+}
+.profile-exit-active {
+  transform-origin: right;
+  transition: 3s;
+}
+.profile-exit-done {
+  display: none;
 }
 
 .imgAvaProfile {
@@ -23,7 +49,6 @@
   line-height: 90px;
   font-size: 30px;
   margin-bottom: 30px;
-  margin-top: 55px;
 }
 
 .small {
