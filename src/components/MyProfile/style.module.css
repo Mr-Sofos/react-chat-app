@@ -1,53 +1,53 @@
 .myProfile {
   background-color: #f7f8f9;
-  max-width: 400px;
+  width: 35vw;
+  overflow-x: hidden;
 }
+
+.myProfile::-webkit-scrollbar {
+  width: 0;
+}
+
 .profile {
   width: 300px;
   padding: 50px 30px 0 30px;
-  transform: translateX(100%);
-  transition:  1s;
-
+  transition: 0.3s;
+  right: 0;
 }
 .profile-done {
   padding: 50px 30px 0 30px;
-  transition:  1s;
-  transform: translateX(0%);
+  transition: 0.3s;
+  transform: translateX(100%) scaleX(0);
 }
-.button {
-  width: 30px;
-}
+
 .buttonProfile {
+  align-items: center;
   text-align: center;
   color: white;
-  position: fixed;
   height: 100%;
-  width: 25px;
+  width: 30px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
   border: 0;
   border-left: 1px solid lavender;
   background-color: lightblue;
   cursor: pointer;
-  /*opacity: 0;*/
+  opacity: 0;
 }
-/*.buttonProfile:hover {*/
-/*  opacity: 1;*/
-/*  transition: 0.2s;*/
-/*}*/
-
+.buttonProfile:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+.letterButtonProfile {
+  position: relative;
+  top: 40%;
+}
 .letterButtonProfile div {
-  font-size: 20px;
+  font-size: 22px;
   padding-bottom: 6px;
 }
-.profile-enter-active {
 
-}
-.profile-enter-done {
-
-}
-.profile-exit-active {
-}
-.profile-exit-done {
-}
 .imgAvaProfile {
   margin: auto;
   background-color: lightblue;
@@ -59,18 +59,21 @@
   font-size: 30px;
   margin-bottom: 30px;
 }
+
 .small {
   height: 50px;
   width: 50px;
   margin: auto;
   background-color: lightblue;
 }
+
 .medium {
   margin: auto;
   height: 60px;
   width: 60px;
   background-color: lightblue;
 }
+
 .large {
   margin: auto;
   height: 70px;
@@ -81,12 +84,14 @@
 .profileNameEmail {
   margin-bottom: 70px;
 }
+
 .profileName {
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
 }
+
 .nick {
   text-align: center;
   font-size: 18px;
@@ -94,6 +99,7 @@
   color: gray;
   margin-bottom: 28px;
 }
+
 .profileContactIcons {
   margin: auto;
   width: 180px;
@@ -102,16 +108,20 @@
   color: #c3d9e2;
   font-size: 24px;
 }
+
 .profileContactIcons div {
   cursor: pointer;
 }
+
 .profileSocial {
   margin-bottom: 30px;
 }
+
 .headSocial {
   font-size: 22px;
   margin-bottom: 12px;
 }
+
 .messenger {
   width: 300px;
   height: 160px;
@@ -121,17 +131,21 @@
   transition: 0.2s;
   margin-bottom: 50px;
 }
+
 .wrapMessenger {
   width: 200px;
   padding: 25px;
   padding-bottom: 0;
   display: flex;
-  align-items: center;
 }
+
 .wrapMessenger .instagram,
 .twitter {
   padding-bottom: 15px;
   display: flex;
+}
+.wrapIconsSocial {
+  align-items: center;
 }
 .IconsImg {
   font-size: 24px;
@@ -167,6 +181,7 @@
   border-radius: 10px;
   margin: 0 10px;
 }
+
 .pdf {
   font-weight: 500;
   font-size: 18px;
