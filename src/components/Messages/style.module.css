@@ -1,8 +1,37 @@
+.selectChat {
+  width: 55vw;
+}
+
 .messages {
-  width: 100vw;
+  margin: 0 30px;
+  width: 50vw;
   height: 100vh;
+}
+
+.headerMessages {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid silver;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding-left: 10px;
 }
 
 .icon {
   color: silver;
+}
+
+.messagesBody {
+  height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.messagesBody::-webkit-scrollbar {
+  width: 0;
 }
