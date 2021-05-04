@@ -1,11 +1,18 @@
 .myProfile {
   background-color: #f7f8f9;
-  width: 400px;
+  width: 35vw;
+  overflow-x: hidden;
 }
+
+.myProfile::-webkit-scrollbar {
+  width: 0;
+}
+
 .profile {
   width: 300px;
   padding: 0 30px;
 }
+
 .imgAvaProfile {
   margin: auto;
   background-color: lightblue;
@@ -18,18 +25,21 @@
   margin-bottom: 30px;
   margin-top: 55px;
 }
+
 .small {
   height: 50px;
   width: 50px;
   margin: auto;
   background-color: lightblue;
 }
+
 .medium {
   margin: auto;
   height: 60px;
   width: 60px;
   background-color: lightblue;
 }
+
 .large {
   margin: auto;
   height: 70px;
@@ -40,12 +50,14 @@
 .profileNameEmail {
   margin-bottom: 70px;
 }
+
 .profileName {
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
 }
+
 .nick {
   text-align: center;
   font-size: 18px;
@@ -53,6 +65,7 @@
   color: gray;
   margin-bottom: 28px;
 }
+
 .profileContactIcons {
   margin: auto;
   width: 180px;
@@ -61,16 +74,20 @@
   color: #c3d9e2;
   font-size: 24px;
 }
+
 .profileContactIcons div {
   cursor: pointer;
 }
+
 .profileSocial {
   margin-bottom: 30px;
 }
+
 .headSocial {
   font-size: 22px;
   margin-bottom: 12px;
 }
+
 .messenger {
   width: 300px;
   height: 160px;
@@ -80,6 +97,7 @@
   transition: 0.2s;
   margin-bottom: 50px;
 }
+
 .wrapMessenger {
   width: 200px;
   padding: 25px;
@@ -87,11 +105,13 @@
   display: flex;
   align-items: center;
 }
+
 .wrapMessenger .instagram,
 .twitter {
   padding-bottom: 15px;
   display: flex;
 }
+
 .IconsImg {
   font-size: 24px;
   color: #c3d9e2;
@@ -100,16 +120,19 @@
   align-items: center;
   padding-bottom: 15px;
 }
+
 .socialNickname {
   padding: 0 0 15px 15px;
   font-size: 20px;
   font-weight: 500;
   color: black;
 }
+
 .headMedia {
   font-size: 22px;
   margin-bottom: 12px;
 }
+
 .ImgPdfMedia {
   display: flex;
   align-items: center;
@@ -119,6 +142,7 @@
   background-color: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
+
 .imgMedia {
   height: 45px;
   width: 45px;
@@ -126,6 +150,7 @@
   border-radius: 10px;
   margin: 0 10px;
 }
+
 .pdf {
   font-weight: 500;
   font-size: 18px;
