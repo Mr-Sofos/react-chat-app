@@ -10,33 +10,42 @@
 
 .profile {
   width: 300px;
-  padding: 50px 50px 0 30px;
-}
-.buttonProfile {
-  position: fixed;
+  padding: 50px 30px 0 30px;
+  transition: 0.3s;
   right: 0;
+}
+.profile-done {
+  padding: 50px 30px 0 30px;
+  transition: 0.3s;
+  transform: translateX(100%) scaleX(0);
+}
+
+.buttonProfile {
+  align-items: center;
+  text-align: center;
+  color: white;
   height: 100%;
-  width: 25px;
+  width: 30px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
   border: 0;
   border-left: 1px solid lavender;
   background-color: lightblue;
   cursor: pointer;
+  opacity: 0;
 }
-
+.buttonProfile:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+.letterButtonProfile {
+  position: relative;
+  top: 40%;
+}
 .letterButtonProfile div {
-  font-size: 20px;
+  font-size: 22px;
   padding-bottom: 6px;
-}
-.profile-enter-active {
-}
-.profile-enter-done {
-}
-.profile-exit-active {
-  transform-origin: right;
-  transition: 3s;
-}
-.profile-exit-done {
-  display: none;
 }
 
 .imgAvaProfile {
@@ -128,7 +137,6 @@
   padding: 25px;
   padding-bottom: 0;
   display: flex;
-  align-items: center;
 }
 
 .wrapMessenger .instagram,
@@ -136,7 +144,9 @@
   padding-bottom: 15px;
   display: flex;
 }
-
+.wrapIconsSocial {
+  align-items: center;
+}
 .IconsImg {
   font-size: 24px;
   color: #c3d9e2;
@@ -145,19 +155,16 @@
   align-items: center;
   padding-bottom: 15px;
 }
-
 .socialNickname {
   padding: 0 0 15px 15px;
   font-size: 20px;
   font-weight: 500;
   color: black;
 }
-
 .headMedia {
   font-size: 22px;
   margin-bottom: 12px;
 }
-
 .ImgPdfMedia {
   display: flex;
   align-items: center;
@@ -167,7 +174,6 @@
   background-color: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
-
 .imgMedia {
   height: 45px;
   width: 45px;

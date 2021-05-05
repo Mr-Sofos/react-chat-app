@@ -9,7 +9,6 @@ import { loadMyId } from '../../redux/ducks/application';
 
 function App() {
   const dispatch = useDispatch();
-
   const loading = useSelector((state) => state.application.loading);
 
   useEffect(() => {

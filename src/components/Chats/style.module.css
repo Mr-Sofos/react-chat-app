@@ -1,14 +1,12 @@
 .chats {
   background-color: #f7f8f9;
-  width: 35vw;
+  width: 25vw;
   height: 100vh;
   overflow: scroll;
 }
-
 .chats::-webkit-scrollbar {
   width: 0;
 }
-
 .search {
   background-color: white;
   color: silver;

@@ -6,14 +6,14 @@ const initialState = {
 
 export default function messages(state = initialState, action) {
   switch (action.type) {
-    case "load/messages/start":
+    case 'load/messages/start':
       return {
         ...state,
         loading: true,
         opened: action.payload,
       };
 
-    case "load/messages/success":
+    case 'load/messages/success':
       return {
         ...state,
         loading: false,
@@ -30,15 +30,15 @@ export default function messages(state = initialState, action) {
 
 export const loadMessages = (myId, contactId) => {
   return (dispatch) => {
-    dispatch({ type: "load/messages/start", payload: contactId });
+    dispatch({ type: 'load/messages/start', payload: contactId });
 
     fetch(`https://api.intocode.ru:8001/api/messages/${myId}/${contactId}`)
       .then((response) => response.json())
       .then((json) => {
         dispatch({
-          type: "load/messages/success",
+          type: 'load/messages/success',
           payload: json,
         });
       });
   };
-}
+};
