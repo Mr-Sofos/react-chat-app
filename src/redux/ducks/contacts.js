@@ -11,7 +11,7 @@ export default function contacts(state = initialState, action) {
       return {
         ...state,
         loading: true,
-      }
+      };
     case 'contacts/load/success':
       return {
         ...state,
@@ -44,14 +44,13 @@ export default function contacts(state = initialState, action) {
   }
 }
 
+export const loadContacts = (id) => {
+  return (dispatch) => {
+    dispatch({ type: 'contacts/load/start' });
 
-
-export const loadContacts = () => {
-  return dispatch => {
-    dispatch({type: 'contacts/load/start'})
     fetch(`https://api.intocode.ru:8001/api/contacts`)
-      .then(response => response.json())
-      .then(json => {
+      .then((response) => response.json())
+      .then((json) => {
         dispatch({
           type: 'contacts/load/success',
           payload: json,
@@ -59,6 +58,7 @@ export const loadContacts = () => {
       })
   }
 }
+
 export const loadAvatars = () => {
   return dispatch => {
     dispatch({type: 'avatars/load/start'})
@@ -81,4 +81,3 @@ export const setFilterText = (text) => {
   })
   }
 }
-

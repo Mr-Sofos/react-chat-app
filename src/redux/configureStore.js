@@ -5,10 +5,10 @@ import { createLogger } from 'redux-logger';
 
 const logger = createLogger({
   diff: true,
-  collapsed: true
+  collapsed: true,
 });
 
 export const store = createStore(
   combineReducers({ application, messages, contacts }),
-  applyMiddleware(thunk, logger)
+  applyMiddleware(thunk, logger),
 );

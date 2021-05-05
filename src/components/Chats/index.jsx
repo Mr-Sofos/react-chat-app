@@ -6,7 +6,6 @@ import {  loadContacts, setFilterText } from '../../redux/ducks/contacts';
 import { Route } from 'react-router-dom';
 import Contact from './contact';
 
-
 function Chats() {
   const contacts = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.contacts.filter)
@@ -23,12 +22,12 @@ function Chats() {
   }, [dispatch])
 
   return (
-    <Route path="/:_id?">
-      <div className={style.chats}>
+    <div className={style.chats}>
       <div className={style.search}>
         <div className="icon">
           <AiOutlineSearch />
         </div>
+            
         <input type="text"
                placeholder="Search contact"
                value={filter}
@@ -43,7 +42,6 @@ function Chats() {
         })}
       </div>
     </div>
-    </Route>
   );
 }
 
