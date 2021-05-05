@@ -1,22 +1,23 @@
 .imageBlock {
-    position: relative}
+  position: relative;
+}
 
 .online {
-    font-size: 7px;
-    color: #00FF35;
-    position: absolute;
-    right: 8px;
-    top: 0;
+  font-size: 7px;
+  color: #00ff35;
+  position: absolute;
+  right: 8px;
+  top: 0;
 }
 
 .avatar {
-    background: linear-gradient(180deg, rgb(0, 136, 255) 36%, rgb(57, 221, 226));
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+  background: linear-gradient(180deg, rgb(0, 136, 255) 36%, rgb(57, 221, 226));
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
