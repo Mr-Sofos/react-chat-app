@@ -15,6 +15,8 @@
   right: 0;
 }
 .profile-done {
+  position: absolute;
+  right: 0;
   padding: 50px 30px 0 30px;
   transition: 0.3s;
   transform: translateX(100%) scaleX(0);
@@ -108,6 +110,12 @@
   color: #c3d9e2;
   font-size: 24px;
 }
+.profileContactIcons .envelope:active,
+.phone:active,
+.videocam:active {
+  color: lightskyblue;
+  transition: 0.1s;
+}
 
 .profileContactIcons div {
   cursor: pointer;
@@ -155,6 +163,7 @@
   align-items: center;
   padding-bottom: 15px;
 }
+
 .socialNickname {
   padding: 0 0 15px 15px;
   font-size: 20px;

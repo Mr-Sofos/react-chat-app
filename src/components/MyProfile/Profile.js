@@ -22,7 +22,7 @@ function Profile({ openProfileInfo }) {
         openProfile={openProfile}
         setOpenProfile={setOpenProfile}
       />
-      <div className={!openProfile ? style.profile : style['profile-done']}>
+      <div className={openProfile ? style.profile : style['profile-done']}>
         <div className={style.childProfile}>
           <Ava size={'large'} radius={10} nameLetter={profile?.fullname[0]} />
           <div className={style.profileNameEmail}>
