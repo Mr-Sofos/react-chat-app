@@ -1,6 +1,7 @@
 const initialState = {
-  items: [],
+  filter: "",
   avatars: [],
+  items: [],
   loading: false,
 };
 
@@ -26,14 +27,24 @@ export default function contacts(state = initialState, action) {
     case 'avatars/load/success':
       return {
         ...state,
-        items: action.payload,
+        avatars: action.payload,
         loading: false,
       }
+
+
+    case 'filter/set':
+      return {
+        ...state,
+        filter: action.payload
+      }
+
 
     default:
       return state;
   }
 }
+
+
 
 export const loadContacts = () => {
   return dispatch => {
@@ -61,3 +72,13 @@ export const loadAvatars = () => {
       })
   }
 }
+
+export const setFilterText = (text) => {
+  return dispatch => {
+  dispatch({
+    type: 'filter/set',
+    payload: text
+  })
+  }
+}
+
