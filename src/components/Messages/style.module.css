@@ -1,27 +1,49 @@
 .selectChat {
   width: 55vw;
 }
-
 .messages {
   margin: 0 30px;
   width: 50vw;
   height: 100vh;
 }
-
-.headerMessages {
+.SearchAndInput {
   display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid silver;
+  margin-left: 10px;
+  align-items: center;
 }
-
-input {
+.InputHeaderMessages input {
+  font-size: 16px;
+  color: silver;
   border: none;
   outline: none;
-  padding-left: 10px;
+  padding-left: 16px;
+  padding-bottom: 3px;
 }
-
 .icon {
   color: silver;
+  font-size: 22px;
+  align-items: center;
+}
+.headerName {
+  font-size: 20px;
+  font-weight: 500;
+}
+.headerNameAndOnline {
+  margin-left: 150px;
+  align-items: center;
+  display: flex;
+}
+.messagesHeaderOnline {
+  font-size: 10px;
+  margin-left: 15px;
+  color: #00ff35;
+}
+.headerMessages {
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid silver;
+  padding: 10px 0;
+  margin-bottom: 30px;
 }
 
 .messagesBody {
@@ -31,7 +53,6 @@ input {
   flex-direction: column;
   margin: auto;
 }
-
 .messagesBody::-webkit-scrollbar {
   width: 0;
 }

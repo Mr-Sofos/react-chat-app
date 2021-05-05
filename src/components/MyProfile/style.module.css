@@ -52,7 +52,7 @@
 
 .imgAvaProfile {
   margin: auto;
-  background-color: lightblue;
+  background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -60,6 +60,7 @@
   line-height: 90px;
   font-size: 30px;
   margin-bottom: 30px;
+  color: #f7f8f9;
 }
 
 .small {
@@ -110,15 +111,15 @@
   color: #c3d9e2;
   font-size: 24px;
 }
+.profileContactIcons div {
+  cursor: pointer;
+}
+
 .profileContactIcons .envelope:active,
 .phone:active,
 .videocam:active {
   color: lightskyblue;
   transition: 0.1s;
-}
-
-.profileContactIcons div {
-  cursor: pointer;
 }
 
 .profileSocial {
@@ -132,7 +133,6 @@
 
 .messenger {
   width: 300px;
-  height: 160px;
   border-radius: 7px;
   background-color: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -143,10 +143,8 @@
 .wrapMessenger {
   width: 200px;
   padding: 25px;
-  padding-bottom: 0;
   display: flex;
 }
-
 .wrapMessenger .instagram,
 .twitter {
   padding-bottom: 15px;
