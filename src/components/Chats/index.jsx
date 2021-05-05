@@ -2,24 +2,24 @@ import { AiOutlineSearch } from 'react-icons/all';
 import style from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import {  loadContacts, setFilterText } from '../../redux/ducks/contacts';
-import { Route } from 'react-router-dom';
+import { loadContacts, setFilterText } from '../../redux/ducks/contacts';
 import Contact from './contact';
 
 function Chats() {
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.contacts.filter)
+  const contacts = useSelector((state) => state.contacts.items);
+  const filter = useSelector((state) => state.contacts.filter);
   const dispatch = useDispatch();
 
-  const filteredContacts = contacts
-    .filter((contact) => contact.fullname?.toLowerCase().includes(filter.toLowerCase()))
+  const filteredContacts = contacts.filter((contact) =>
+    contact.fullname?.toLowerCase().includes(filter.toLowerCase()),
+  );
   const handleSearch = (e) => {
-    dispatch(setFilterText(e.target.value))
-  }
+    dispatch(setFilterText(e.target.value));
+  };
 
   useEffect(() => {
-    dispatch(loadContacts())
-  }, [dispatch])
+    dispatch(loadContacts());
+  }, [dispatch]);
 
   return (
     <div className={style.chats}>
@@ -27,18 +27,17 @@ function Chats() {
         <div className="icon">
           <AiOutlineSearch />
         </div>
-            
-        <input type="text"
-               placeholder="Search contact"
-               value={filter}
-               onChange={handleSearch}
+
+        <input
+          type="text"
+          placeholder="Search contact"
+          value={filter}
+          onChange={handleSearch}
         />
       </div>
       <div>
         {filteredContacts.map((contact) => {
-          return (
-            <Contact contact={contact}  key={contact.id} />
-          );
+          return <Contact contact={contact} key={contact.id} />;
         })}
       </div>
     </div>

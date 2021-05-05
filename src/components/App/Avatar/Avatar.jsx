@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { loadContacts } from '../../../redux/ducks/contacts';
+import React from 'react';
+import style from './style.module.css';
+import { FaCircle } from 'react-icons/all';
 
 function Avatar(props) {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadContacts());
-  }, []);
-
   return (
-    <div>
-      <img src={props.avatars.picture} alt="img" />
+    <div className={style.imageBlock}>
+      <div className={style.avatar}>{props.contact.fullname?.[0]}</div>
+      {props.contact.online ? <FaCircle className={style.online} /> : ''}
     </div>
   );
 }
