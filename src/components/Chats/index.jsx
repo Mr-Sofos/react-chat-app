@@ -37,7 +37,7 @@ function Chats() {
       </div>
       <div>
         {filteredContacts.map((contact) => {
-          return <Contact contact={contact} key={contact.id} />;
+          return <Contact contact={contact} key={contact._id} />;
         })}
       </div>
     </div>

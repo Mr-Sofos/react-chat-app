@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './style.module.css';
 
-function Ava({ nameLetter, size, radius }) {
+function Ava({ nameLetter }) {
   return (
-    <div size={size} className={style.imgAvaProfile}>
+    <div  className={style.imgAvaProfile}>
       {nameLetter}
     </div>
   );
