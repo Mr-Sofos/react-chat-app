@@ -8,10 +8,10 @@ function Contact(props) {
 
   const cutMessage = (text) => {
     if (text?.length > 15) {
-      return text.substring(0, 15) + '...'
+      return text.substring(0, 15) + '...';
     }
-    return text
-  }
+    return text;
+  };
 
   return (
     <Link className={style.link} to={`/${props.contact._id}`}>
@@ -25,7 +25,6 @@ function Contact(props) {
           <div className={style.lastMessage}>
             {cutMessage(props.contact.lastMessage?.content)}
           </div>
-
         </div>
       </div>
     </Link>

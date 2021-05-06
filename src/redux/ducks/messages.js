@@ -1,4 +1,5 @@
 const initialState = {
+  filter: '',
   loading: true,
   opened: null,
   items: [],
@@ -18,6 +19,11 @@ export default function messages(state = initialState, action) {
         ...state,
         loading: false,
         items: action.payload,
+      };
+    case 'filter/messages':
+      return {
+        ...state,
+        filter: action.payload,
       };
     default:
       return state;
@@ -40,5 +46,13 @@ export const loadMessages = (myId, contactId) => {
           payload: json,
         });
       });
+  };
+};
+export const setFilterMessages = (text) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'filter/messages',
+      payload: text,
+    });
   };
 };
