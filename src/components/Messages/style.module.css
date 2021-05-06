@@ -4,7 +4,7 @@
 
 .messages {
   margin: 0 30px;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -34,4 +34,8 @@ input {
 
 .messagesBody::-webkit-scrollbar {
   width: 0;
+}
+
+.message {
+  word-break: break-all;
 }

@@ -6,7 +6,7 @@ function MessagesBody({ loading, messages }) {
     <div className={style.messagesBody}>
       {!loading &&
         messages.map((message, index) => {
-          return <div key={index}>{message.content}</div>;
+          return <div className={style.message} key={index}>{message.content}</div>;
         })}
     </div>
   );
