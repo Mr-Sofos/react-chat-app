@@ -48,3 +48,11 @@ export const loadMessages = (myId, contactId) => {
       });
   };
 };
+export const setFilterMessages = (text) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'filter/messages',
+      payload: text,
+    });
+  };
+};

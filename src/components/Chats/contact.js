@@ -5,6 +5,14 @@ import Avatar from '../App/Avatar/Avatar';
 
 function Contact(props) {
   const openContactId = useParams()._id;
+
+  const cutMessage = (text) => {
+    if (text?.length > 15) {
+      return text.substring(0, 15) + '...';
+    }
+    return text;
+  };
+
   return (
     <Link className={style.link} to={`/${props.contact._id}`}>
       <div
@@ -15,7 +23,7 @@ function Contact(props) {
         <div className={style.fullNameLastMessage}>
           <div className={style.fullName}>{props.contact.fullname}</div>
           <div className={style.lastMessage}>
-            {props.contact.lastMessage?.content}
+            {cutMessage(props.contact.lastMessage?.content)}
           </div>
         </div>
       </div>

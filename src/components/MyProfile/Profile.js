@@ -24,7 +24,11 @@ function Profile({ openProfileInfo }) {
       />
       <div className={openProfile ? style.profile : style['profile-done']}>
         <div className={style.childProfile}>
-          <Ava size={style.small} radius={10} nameLetter={profile?.fullname[0]} />
+          <Ava
+            size={style.small}
+            radius={10}
+            nameLetter={profile?.fullname[0]}
+          />
           <div className={style.profileNameEmail}>
             <div className={style.profileName}>{profile?.fullname}</div>
             <div className={style.nick}>@{profile?.username}</div>
