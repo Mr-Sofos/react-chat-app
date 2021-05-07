@@ -15,7 +15,6 @@ function MyProfile() {
     }
   }, [dispatch, openProfileInfo, myId]);
 
-
   return <Profile openProfileInfo={openProfileInfo} />;
 }
 

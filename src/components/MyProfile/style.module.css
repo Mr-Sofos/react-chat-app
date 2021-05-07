@@ -15,33 +15,6 @@
   transform: translateX(100%);
   transition: 0.3s;
 }
-.buttonProfile {
-  align-items: center;
-  text-align: center;
-  color: white;
-  height: 100%;
-  width: 30px;
-  position: absolute;
-  right: 0;
-  z-index: 5;
-  border: 0;
-  border-left: 1px solid lavender;
-  background-color: lightblue;
-  cursor: pointer;
-  opacity: 0;
-}
-.buttonProfile:hover {
-  opacity: 1;
-  transition: 0.2s;
-}
-.letterButtonProfile {
-  position: relative;
-  top: 40%;
-}
-.letterButtonProfile div {
-  font-size: 22px;
-  padding-bottom: 6px;
-}
 .imgAvaProfile {
   margin: auto;
   background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));

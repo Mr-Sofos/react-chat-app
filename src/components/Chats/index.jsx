@@ -24,24 +24,26 @@ function Chats() {
   return (
     <div className={style.chats}>
       <div className={style.inputBlock}>
-      <div className={style.search}>
-        <div className="icon">
-          <AiOutlineSearch />
-        </div>
+        <div className={style.search}>
+          <div className="icon">
+            <AiOutlineSearch />
+          </div>
 
-        <input
-          type="text"
-          placeholder="Search contact"
-          value={filter}
-          onChange={handleSearch}
-        />
+          <input
+            type="text"
+            placeholder="Search contact"
+            value={filter}
+            onChange={handleSearch}
+          />
+        </div>
       </div>
-      </div>
-      <div>
-        {filteredContacts.map((contact) => {
-          return <Contact contact={contact} key={contact._id} />;
-        })}
-      </div>
+      {
+        <div>
+          {filteredContacts.map((contact) => {
+            return <Contact contact={contact} key={contact._id} />;
+          })}
+        </div>
+      }
     </div>
   );
 }

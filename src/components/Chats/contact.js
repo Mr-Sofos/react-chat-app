@@ -23,16 +23,14 @@ function Contact(props) {
         <Avatar contact={props.contact} />
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>
-            <div className={style.fullName}>
-              {props.contact.fullname}
-            </div>
+            <div className={style.fullName}>{props.contact.fullname}</div>
             <div className={style.lastMessage}>
               {cutMessage(props.contact.lastMessage?.content)}
             </div>
           </div>
-            <div className={style.time}>
-              {moment(props.contact.lastMessage?.time).format('hh:mm')}
-            </div>
+          <div className={style.time}>
+            {moment(props.contact.lastMessage?.time).format('hh:mm')}
+          </div>
         </div>
       </div>
     </Link>
