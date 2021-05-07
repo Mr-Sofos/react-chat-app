@@ -28,7 +28,7 @@ function Social({ socials }) {
               Object.keys(socials).map((social, index) => {
                 return (
                   <div className={style.socialNickname} key={index}>
-                    <div>{socials[social]}</div>
+                    <i className={`fab fa-${social}`} /> {socials[social]}
                   </div>
                 );
               })}
