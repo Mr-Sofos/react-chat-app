@@ -5,7 +5,6 @@ import Connection from './Connection';
 import Social from './Social';
 import Media from './Media';
 import Ava from './Ava';
-import { Route } from 'react-router-dom';
 import ButtonProfile from './ButtonProfile';
 
 function Profile({ openProfileInfo }) {
@@ -14,10 +13,11 @@ function Profile({ openProfileInfo }) {
       return openProfileInfo === item._id;
     }),
   );
+
   const [openProfile, setOpenProfile] = useState(false);
 
   return (
-    <Route path="/:_id?">
+    <div>
       <ButtonProfile
         openProfile={openProfile}
         setOpenProfile={setOpenProfile}
@@ -38,7 +38,7 @@ function Profile({ openProfileInfo }) {
         <Social socials={profile?.socials} />
         <Media />
       </div>
-    </Route>
+    </div>
   );
 }
 

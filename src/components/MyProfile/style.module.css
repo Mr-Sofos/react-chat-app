@@ -1,27 +1,20 @@
 .myProfile {
   background-color: #f7f8f9;
-  width: 35vw;
-  overflow-x: hidden;
 }
-
 .myProfile::-webkit-scrollbar {
   width: 0;
 }
-
 .profile {
   width: 300px;
   padding: 50px 30px 0 30px;
+  transform: translateX(0%);
   transition: 0.3s;
-  right: 0;
 }
 .profile-done {
-  position: absolute;
-  right: 0;
   padding: 50px 30px 0 30px;
+  transform: translateX(100%);
   transition: 0.3s;
-  transform: translateX(100%) scaleX(0);
 }
-
 .buttonProfile {
   align-items: center;
   text-align: center;
@@ -30,7 +23,7 @@
   width: 30px;
   position: absolute;
   right: 0;
-  z-index: 1;
+  z-index: 5;
   border: 0;
   border-left: 1px solid lavender;
   background-color: lightblue;
@@ -49,7 +42,6 @@
   font-size: 22px;
   padding-bottom: 6px;
 }
-
 .imgAvaProfile {
   margin: auto;
   background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));
@@ -62,39 +54,33 @@
   margin-bottom: 30px;
   color: #f7f8f9;
 }
-
 .small {
   height: 50px;
   width: 50px;
   margin: auto;
   background-color: lightblue;
 }
-
 .medium {
   margin: auto;
   height: 60px;
   width: 60px;
   background-color: lightblue;
 }
-
 .large {
   margin: auto;
   height: 70px;
   width: 70px;
   background-color: lightblue;
 }
-
 .profileNameEmail {
   margin-bottom: 70px;
 }
-
 .profileName {
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
 }
-
 .nick {
   text-align: center;
   font-size: 18px;
@@ -102,7 +88,6 @@
   color: gray;
   margin-bottom: 28px;
 }
-
 .profileContactIcons {
   margin: auto;
   width: 180px;
@@ -114,23 +99,19 @@
 .profileContactIcons div {
   cursor: pointer;
 }
-
 .profileContactIcons .envelope:active,
 .phone:active,
 .videocam:active {
   color: lightskyblue;
   transition: 0.1s;
 }
-
 .profileSocial {
   margin-bottom: 30px;
 }
-
 .headSocial {
   font-size: 22px;
   margin-bottom: 12px;
 }
-
 .messenger {
   width: 300px;
   border-radius: 7px;
@@ -139,7 +120,6 @@
   transition: 0.2s;
   margin-bottom: 50px;
 }
-
 .wrapMessenger {
   width: 200px;
   padding: 25px;
@@ -161,7 +141,6 @@
   align-items: center;
   padding-bottom: 15px;
 }
-
 .socialNickname {
   padding: 0 0 15px 15px;
   font-size: 20px;
@@ -188,7 +167,6 @@
   border-radius: 10px;
   margin: 0 10px;
 }
-
 .pdf {
   font-weight: 500;
   font-size: 18px;
