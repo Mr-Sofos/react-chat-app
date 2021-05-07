@@ -2,7 +2,7 @@ const initialState = {
   filter: '',
   avatars: [],
   items: [],
-  loading: false,
+  loading: true,
 };
 
 export default function contacts(state = initialState, action) {
