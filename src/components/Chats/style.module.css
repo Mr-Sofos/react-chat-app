@@ -1,9 +1,10 @@
 .chats {
   background-color: #f7f8f9;
-  width: 25vw;
+  min-width: 25vw;
   height: 100vh;
   overflow: scroll;
 }
+
 .chats::-webkit-scrollbar {
   width: 0;
 }
@@ -59,7 +60,6 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   transition: 0.2s;
 }
-
 
 .fullName {
   font-size: 20px;

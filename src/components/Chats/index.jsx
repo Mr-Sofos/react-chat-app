@@ -46,6 +46,7 @@ function Chats() {
           return <Contact contact={contact} key={index} />;
         })
       )}
+
     </div>
   );
 }

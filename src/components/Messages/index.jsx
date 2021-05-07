@@ -8,15 +8,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 function Messages() {
-  const loading = useSelector((state) => state.messages.loading);
-
   const dispatch = useDispatch();
-
   const opened = useParams()._id;
 
-  const myId = useSelector((state) => state.application.myId);
-
+  const loading = useSelector((state) => state.messages.loading);
   const messages = useSelector((state) => state.messages.items);
+  const myId = useSelector((state) => state.application.myId);
+  const filter = useSelector((state) => state.messages.filter);
 
   useEffect(() => {
     if (opened) {
@@ -27,14 +25,16 @@ function Messages() {
   if (!opened) {
     return (
       <div className={style.selectChat}>
-        <div>Выбери чат, чтобы начать переписку</div>
+        <div className={style.PreloaderChatMessages}>
+         ⬅ Выбери чат, чтобы начать переписку
+        </div>
       </div>
     );
   }
   return (
     <div className={style.messages}>
-      <HeaderMessages />
-      <MessagesBody messages={messages} loading={loading} />
+      <HeaderMessages filter={filter} />
+      <MessagesBody filter={filter} messages={messages} loading={loading} />
       <SendMessages />
     </div>
   );

@@ -42,7 +42,7 @@ export default function contacts(state = initialState, action) {
   }
 }
 
-export const loadContacts = (id) => {
+export const loadContacts = () => {
   return (dispatch) => {
     dispatch({ type: 'contacts/load/start' });
 
