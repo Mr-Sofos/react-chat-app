@@ -23,6 +23,7 @@ function Chats() {
 
   return (
     <div className={style.chats}>
+      <div className={style.inputBlock}>
       <div className={style.search}>
         <div className="icon">
           <AiOutlineSearch />
@@ -34,6 +35,7 @@ function Chats() {
           value={filter}
           onChange={handleSearch}
         />
+      </div>
       </div>
       <div>
         {filteredContacts.map((contact) => {
