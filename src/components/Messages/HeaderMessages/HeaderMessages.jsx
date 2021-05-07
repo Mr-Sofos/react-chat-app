@@ -2,11 +2,13 @@ import React from 'react';
 import style from '../style.module.css';
 import { AiOutlineSearch } from 'react-icons/all';
 import MessagesHeaderName from './MessagesHeaderName';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setFilterMessages } from '../../../redux/ducks/messages';
+import PreloaderNameAndOnlineMessages from './PreloaderNameAndOnlineMessages';
 
 function HeaderMessages({ filter }) {
   const dispatch = useDispatch();
+  const loadingHeaderMessages = useSelector((state) => state.messages.loading);
 
   const handleSearch = (e) => {
     dispatch(setFilterMessages(e.target.value));
@@ -36,9 +38,13 @@ function HeaderMessages({ filter }) {
           </span>
         </div>
       </div>
-      <div>
-        <MessagesHeaderName />
-      </div>
+      {loadingHeaderMessages ? (
+        <PreloaderNameAndOnlineMessages />
+      ) : (
+        <div>
+          <MessagesHeaderName />
+        </div>
+      )}
     </div>
   );
 }
