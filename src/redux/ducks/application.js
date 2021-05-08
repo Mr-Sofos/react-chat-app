@@ -1,10 +1,16 @@
 const initialState = {
   loading: false,
   myId: '',
+  openProfile: false,
 };
 
 export default function application(state = initialState, action) {
   switch (action.type) {
+    case 'profile/OpenAndDelete':
+      return {
+        ...state,
+        openProfile: !state.openProfile,
+      };
     case 'load/profile/start':
       return {
         ...state,
@@ -53,3 +59,6 @@ export const loadProfileInfo = (myId, contactId) => {
       });
   };
 };
+export function profileContactOpen() {
+  return { type: 'profile/OpenAndDelete' };
+}

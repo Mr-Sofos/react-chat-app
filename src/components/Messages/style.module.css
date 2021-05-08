@@ -9,7 +9,7 @@
   text-align: center;
 }
 .wrapLoaderAndText {
-  margin-left: 130px;
+  margin-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -44,7 +44,6 @@
 .SearchAndInput {
   align-items: center;
   display: flex;
-  margin-left: 10px;
 }
 .InputHeaderMessages input {
   height: 28px;
@@ -54,7 +53,7 @@
   outline: none;
   padding-left: 16px;
   line-height: 28px;
-  padding-right: 30px;
+  padding-right: 10px;
   width: 120px;
 }
 .icon {
@@ -67,16 +66,19 @@
 .clear {
   padding-top: 3px;
   opacity: 0.2;
-  position: relative;
-  right: 24px;
   cursor: pointer;
+}
+.settingsHeaderMessages {
+  cursor: pointer;
+}
+.settingsHeaderMessages span {
+  margin-top: 2px;
 }
 .headerName {
   font-size: 20px;
   font-weight: 500;
 }
 .headerNameAndOnline {
-  margin-left: 150px;
   align-items: center;
   display: flex;
 }
@@ -103,8 +105,9 @@
 .headerMessages {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid silver;
-  padding: 10px 0;
+  padding: 10px 10px;
   margin-bottom: 30px;
 }
 .messagesBody {

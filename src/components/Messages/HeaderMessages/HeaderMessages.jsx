@@ -5,10 +5,15 @@ import MessagesHeaderName from './MessagesHeaderName';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterMessages } from '../../../redux/ducks/messages';
 import PreloaderNameAndOnlineMessages from './PreloaderNameAndOnlineMessages';
+import { profileContactOpen } from '../../../redux/ducks/application';
 
 function HeaderMessages({ filter }) {
   const dispatch = useDispatch();
   const loadingHeaderMessages = useSelector((state) => state.messages.loading);
+
+  const handleClick = () => {
+    dispatch(profileContactOpen());
+  };
 
   const handleSearch = (e) => {
     dispatch(setFilterMessages(e.target.value));
@@ -45,6 +50,11 @@ function HeaderMessages({ filter }) {
           <MessagesHeaderName />
         </div>
       )}
+      <div className={style.settingsHeaderMessages}>
+        <span className="material-icons" onClick={handleClick}>
+          settings
+        </span>
+      </div>
     </div>
   );
 }
