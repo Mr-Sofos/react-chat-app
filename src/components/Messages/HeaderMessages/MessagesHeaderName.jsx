@@ -4,7 +4,7 @@ import { FaCircle } from 'react-icons/all';
 import style from '../style.module.css';
 import { useSelector } from 'react-redux';
 
-function MessagesHeaderName(props) {
+function MessagesHeaderName() {
   const openProfileName = useParams()._id;
 
   const NameHeaderContact = useSelector((state) =>
@@ -20,7 +20,7 @@ function MessagesHeaderName(props) {
         {NameHeaderContact?.online ? (
           <FaCircle className={style.messagesHeaderOnline} />
         ) : (
-          <FaCircle className={style.messagesHeaderOffline} />
+          ''
         )}
       </div>
     </div>

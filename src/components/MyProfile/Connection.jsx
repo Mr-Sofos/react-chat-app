@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.css';
 import { IoMdVideocam, IoMdCall, FaEnvelope } from 'react-icons/all';
 
-function Connection(props) {
+function Connection() {
   return (
     <div className={style.profileContactIcons}>
       <div className={style.phone}>

@@ -5,9 +5,9 @@
   width: 0;
 }
 .profile {
-  width: 300px;
   padding: 50px 30px 0 30px;
   transform: translateX(0%);
+  opacity: 1;
   transition: 0.3s;
 }
 .profile-done {
@@ -76,7 +76,7 @@
 .phone:active,
 .videocam:active {
   color: lightskyblue;
-  transition: 0.1s;
+  transition: backgound 0.1s;
 }
 .profileSocial {
   margin-bottom: 30px;

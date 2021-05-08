@@ -3,6 +3,7 @@ import style from '../style.module.css';
 import { MdClear } from 'react-icons/all';
 import { setFilterMessages } from '../../../redux/ducks/messages';
 import { useDispatch } from 'react-redux';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 function ClearSearchMessages({ filter }) {
   const dispatch = useDispatch();
@@ -10,6 +11,10 @@ function ClearSearchMessages({ filter }) {
   const clearSearchMessages = () => {
     dispatch(setFilterMessages(''));
   };
+
+  useHotkeys('shift+x', () => {
+    dispatch(setFilterMessages(''));
+  });
 
   return (
     <div className={style.clear}>
