@@ -2,23 +2,21 @@ import { AiOutlineSearch } from 'react-icons/all';
 import style from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { loadContacts, setFilterText } from '../../redux/ducks/contacts';
+import { loadContacts } from '../../redux/ducks/contacts';
 import Contact from './contact';
 import SkeletonLoader from './skeletonLoader';
+import SearchContacts from './searchContacts';
 
 function Chats() {
   const contacts = useSelector((state) => state.contacts.items);
-  const filter = useSelector((state) => state.contacts.filter);
   const loader = useSelector((state) => state.contacts.loading);
+  const filter = useSelector((state) => state.contacts.filter);
+
   const dispatch = useDispatch();
 
   const filteredContacts = contacts.filter((contact) =>
     contact.fullname?.toLowerCase().includes(filter.toLowerCase()),
   );
-
-  const handleSearch = (e) => {
-    dispatch(setFilterText(e.target.value));
-  };
 
   useEffect(() => {
     dispatch(loadContacts());
@@ -31,12 +29,7 @@ function Chats() {
           <div className="icon">
             <AiOutlineSearch />
           </div>
-          <input
-            type="text"
-            placeholder="Search contact"
-            value={filter}
-            onChange={handleSearch}
-          />
+          <SearchContacts contacts={contacts} />
         </div>
       </div>
       {loader ? (
@@ -46,7 +39,6 @@ function Chats() {
           return <Contact contact={contact} key={index} />;
         })
       )}
-
     </div>
   );
 }
