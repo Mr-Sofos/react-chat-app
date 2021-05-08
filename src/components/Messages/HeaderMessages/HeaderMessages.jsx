@@ -27,7 +27,7 @@ function HeaderMessages({ filter }) {
         </div>
         <ClearSearchMessages filter={filter} />
       </div>
-      {loadingHeaderMessages ? (
+      {!loadingHeaderMessages ? (
         <PreloaderNameAndOnlineMessages />
       ) : (
         <MessagesHeaderName />
