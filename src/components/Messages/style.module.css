@@ -16,33 +16,35 @@
 .preloaderHeader {
   margin-right: 10px;
   align-items: center;
-  animation: loaderHeader 0.8s infinite;
+  animation: loaderHeader 1s infinite;
   font-size: 24px;
   height: 30px;
   line-height: 30px;
 }
 .autorenewPreloaderHeader {
   margin-top: 3px;
- }
+}
 .headloadertext {
   font-size: 18px;
   font-weight: 500;
   padding: 0 5px;
 }
-/*@keyframes loaderHeader {*/
-/*  0% {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  100% {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
+@keyframes loaderHeader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .messages {
   margin: 0 30px;
   width: 50vw;
   height: 100vh;
 }
 .SearchAndInput {
+  width: 180px;
+  height: 28px;
   align-items: center;
   display: flex;
 }
@@ -54,28 +56,31 @@
   outline: none;
   padding-left: 16px;
   line-height: 28px;
-  padding-right: 10px;
   width: 120px;
 }
-.icon {
-  padding-top: 3px;
+.iconSearchMessages {
   cursor: pointer;
   color: silver;
   font-size: 22px;
-  align-items: center;
+}
+.AiOutlineSearch {
+  margin-top: 3px;
 }
 .clear {
-  padding-top: 3px;
-  opacity: 0.2;
   cursor: pointer;
   font-size: 22px;
+}
+.clear .clearSerch {
+  margin-top: 4px;
+  color: silver;
 }
 .settingsHeaderMessages {
   cursor: pointer;
 }
-.settingsHeaderMessages span {
-  margin-top: 2px;
-  font-size: 20px;
+.settingsHeaderMessages .openProfile {
+  margin-top: 5px;
+  font-size: 22px;
+  color: silver;
 }
 .headerName {
   font-size: 20px;

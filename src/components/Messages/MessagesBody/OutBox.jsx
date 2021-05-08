@@ -6,12 +6,12 @@ function OutBox({ messages }) {
   return (
     <div className={style.outBox}>
       <div className={style.outBoxMessage}>
-      <div className={style.content}>{messages.content}</div>
-      <div className={style.dateCheck}>
-        <div className={style.date}>
-          {moment(messages.time).format('hh:mm')}
+        <div className={style.content}>{messages.content}</div>
+        <div className={style.dateCheck}>
+          <div className={style.date}>
+            {moment(messages.time).format('hh:mm')}
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

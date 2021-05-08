@@ -16,7 +16,7 @@ function PreloaderNameAndOnlineMessages(props) {
   return (
     <div className={style.wrapLoaderAndText}>
       <div className={style.preloaderHeader}>
-          <MdAutorenew className={style.autorenewPreloaderHeader}/>
+        <MdAutorenew className={style.autorenewPreloaderHeader} />
       </div>
       <div className={style.headloadertext}>Загрузка чата</div>
       {Contact?.online ? (

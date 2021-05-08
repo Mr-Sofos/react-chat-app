@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterText } from '../../redux/ducks/contacts';
-import { MdClear, TiDelete } from 'react-icons/all';
+import { MdClear } from 'react-icons/all';
 import style from './style.module.css';
 
 function SearchContacts(props) {

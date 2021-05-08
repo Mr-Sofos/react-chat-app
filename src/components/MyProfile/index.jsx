@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Profile from './Profile';
 import { loadProfileInfo } from '../../redux/ducks/application';
+import Profile from './Profile';
 
 function MyProfile() {
   const dispatch = useDispatch();

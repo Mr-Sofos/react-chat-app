@@ -1,60 +1,43 @@
 import React from 'react';
 import style from '../style.module.css';
-import { AiOutlineSearch, MdClear, IoSettingsSharp } from 'react-icons/all';
+import { AiOutlineSearch } from 'react-icons/all';
 import MessagesHeaderName from './MessagesHeaderName';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterMessages } from '../../../redux/ducks/messages';
 import PreloaderNameAndOnlineMessages from './PreloaderNameAndOnlineMessages';
-import { profileContactOpen } from '../../../redux/ducks/application';
+import ClearSearchMessages from './ClearSearchMessages';
+import OpenBlockProfile from './OpenBlockProfile';
 
 function HeaderMessages({ filter }) {
   const dispatch = useDispatch();
   const loadingHeaderMessages = useSelector((state) => state.messages.loading);
 
-  const handleClick = () => {
-    dispatch(profileContactOpen());
-  };
-
   const handleSearch = (e) => {
     dispatch(setFilterMessages(e.target.value));
-  };
-
-  const clearSearchMessages = () => {
-    dispatch(setFilterMessages(''));
   };
 
   return (
     <div className={style.headerMessages}>
       <div className={style.SearchAndInput}>
-        <div className={style.icon}>
-          <AiOutlineSearch />
+        <div className={style.iconSearchMessages}>
+          <AiOutlineSearch className={style.AiOutlineSearch} />
         </div>
         <div className={style.InputHeaderMessages}>
           <input
             type="text"
-            placeholder="Search Messages"
+            placeholder="Search messages"
             onChange={handleSearch}
             value={filter}
           />
         </div>
-        <div className={style.clear}>
-          <span onClick={clearSearchMessages}>
-            <MdClear />
-          </span>
-        </div>
+        <ClearSearchMessages filter={filter} />
       </div>
-      {!loadingHeaderMessages ? (
+      {loadingHeaderMessages ? (
         <PreloaderNameAndOnlineMessages />
       ) : (
-        <div>
-          <MessagesHeaderName />
-        </div>
+        <MessagesHeaderName />
       )}
-      <div className={style.settingsHeaderMessages}>
-        <span onClick={handleClick}>
-          <IoSettingsSharp />
-        </span>
-      </div>
+      <OpenBlockProfile />
     </div>
   );
 }
