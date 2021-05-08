@@ -21,6 +21,7 @@ function Contact(props) {
     ${props.contact._id === openContactId ? style.contactActive : ''}`}
       >
         <Avatar contact={props.contact} />
+
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>
             <div className={style.fullName}>{props.contact.fullname}</div>
