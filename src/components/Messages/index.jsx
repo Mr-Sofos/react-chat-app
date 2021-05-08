@@ -26,7 +26,7 @@ function Messages() {
     return (
       <div className={style.selectChat}>
         <div className={style.PreloaderChatMessages}>
-         ⬅ Выбери чат, чтобы начать переписку
+          ⬅ Выбери чат, чтобы начать переписку
         </div>
       </div>
     );

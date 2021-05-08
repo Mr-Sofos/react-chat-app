@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './style.module.css';
 import { useSelector } from 'react-redux';
 import Connection from './Connection';
 import Social from './Social';
 import Media from './Media';
 import Ava from './Ava';
-import ButtonProfile from './ButtonProfile';
 
 function Profile({ openProfileInfo }) {
+  const openProfile = useSelector((state) => state.application.openProfile);
   const profile = useSelector((state) =>
     state.contacts.items.find((item) => {
       return openProfileInfo === item._id;
     }),
   );
 
-  const [openProfile, setOpenProfile] = useState(false);
-
   return (
     <div>
-      <ButtonProfile
-        openProfile={openProfile}
-        setOpenProfile={setOpenProfile}
-      />
       <div className={openProfile ? style.profile : style['profile-done']}>
         <div className={style.childProfile}>
           <Ava
