@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../style.module.css';
-import { AiOutlineSearch } from 'react-icons/all';
+import { AiOutlineSearch, MdClear, IoSettingsSharp } from 'react-icons/all';
 import MessagesHeaderName from './MessagesHeaderName';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterMessages } from '../../../redux/ducks/messages';
@@ -38,12 +38,12 @@ function HeaderMessages({ filter }) {
           />
         </div>
         <div className={style.clear}>
-          <span className="material-icons" onClick={clearSearchMessages}>
-            clear
+          <span onClick={clearSearchMessages}>
+            <MdClear />
           </span>
         </div>
       </div>
-      {loadingHeaderMessages ? (
+      {!loadingHeaderMessages ? (
         <PreloaderNameAndOnlineMessages />
       ) : (
         <div>
@@ -51,8 +51,8 @@ function HeaderMessages({ filter }) {
         </div>
       )}
       <div className={style.settingsHeaderMessages}>
-        <span className="material-icons" onClick={handleClick}>
-          settings
+        <span onClick={handleClick}>
+          <IoSettingsSharp />
         </span>
       </div>
     </div>

@@ -1,17 +1,18 @@
 import React from 'react';
 import style from './style.module.css';
+import { IoMdVideocam, IoMdCall, FaEnvelope } from 'react-icons/all';
 
 function Connection(props) {
   return (
     <div className={style.profileContactIcons}>
       <div className={style.phone}>
-        <span className="material-icons">call</span>
+        <IoMdCall />
       </div>
       <div className={style.videocam}>
-        <span className="material-icons">videocam</span>
+        <IoMdVideocam />
       </div>
       <div className={style.envelope}>
-        <span className="material-icons">email</span>
+        <FaEnvelope />
       </div>
     </div>
   );

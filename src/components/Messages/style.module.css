@@ -16,26 +16,27 @@
 .preloaderHeader {
   margin-right: 10px;
   align-items: center;
-  animation: loaderHeader 0.5s infinite;
-}
-.preloaderHeader span {
+  animation: loaderHeader 0.8s infinite;
   font-size: 24px;
-  margin-top: 4px;
-  z-index: 111;
+  height: 30px;
+  line-height: 30px;
 }
+.autorenewPreloaderHeader {
+  margin-top: 3px;
+ }
 .headloadertext {
   font-size: 18px;
   font-weight: 500;
   padding: 0 5px;
 }
-@keyframes loaderHeader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+/*@keyframes loaderHeader {*/
+/*  0% {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  100% {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
 .messages {
   margin: 0 30px;
   width: 50vw;
@@ -67,12 +68,14 @@
   padding-top: 3px;
   opacity: 0.2;
   cursor: pointer;
+  font-size: 22px;
 }
 .settingsHeaderMessages {
   cursor: pointer;
 }
 .settingsHeaderMessages span {
   margin-top: 2px;
+  font-size: 20px;
 }
 .headerName {
   font-size: 20px;
