@@ -2,7 +2,7 @@ import React from 'react';
 import style from '../style.module.css';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { FaCircle } from 'react-icons/all';
+import { FaCircle, MdAutorenew } from 'react-icons/all';
 
 function PreloaderNameAndOnlineMessages(props) {
   const OfflineOrOnlineContact = useParams()._id;
@@ -16,7 +16,7 @@ function PreloaderNameAndOnlineMessages(props) {
   return (
     <div className={style.wrapLoaderAndText}>
       <div className={style.preloaderHeader}>
-        <span className="material-icons">autorenew</span>
+        <MdAutorenew className={style.autorenewPreloaderHeader} />
       </div>
       <div className={style.headloadertext}>Загрузка чата</div>
       {Contact?.online ? (
