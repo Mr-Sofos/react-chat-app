@@ -30,6 +30,9 @@ export default function application(state = initialState, action) {
 }
 
 // тут экшн креэйторы
+export function profileContactOpen() {
+  return { type: 'profile/OpenAndDelete' };
+}
 
 // тут санки
 export const loadMyId = () => {
@@ -59,6 +62,3 @@ export const loadProfileInfo = (myId, contactId) => {
       });
   };
 };
-export function profileContactOpen() {
-  return { type: 'profile/OpenAndDelete' };
-}
