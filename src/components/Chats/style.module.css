@@ -20,21 +20,22 @@
 .search {
   background-color: white;
   color: silver;
-  width: 80%;
+  width: 85%;
   padding: 10px;
   margin: 20px auto 40px;
   display: flex;
   align-items: center;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  justify-content: space-between;
 }
 
 .search input {
   border: none;
   outline: none;
-  margin-left: 5px;
   font-size: 17px;
-  max-width: 80%;
+  max-width: 85%;
+  flex: 1;
 }
 
 .contact {
@@ -80,9 +81,6 @@
   justify-content: space-between;
 }
 
-.fullNameLastMessage {
-}
-
 .lastMessage {
   font-size: 15px;
   color: dimgray;
@@ -99,4 +97,11 @@ img {
   font-size: 13px;
   color: dimgray;
   justify-content: end;
+}
+
+.deleteSearch {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
 }
