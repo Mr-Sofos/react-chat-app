@@ -49,3 +49,12 @@
   justify-content: right;
   margin-left: 120px;
 }
+
+.infobox {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  font-weight: 600;
+  align-self: center;
+}
