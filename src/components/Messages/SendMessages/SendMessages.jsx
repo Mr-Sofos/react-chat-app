@@ -24,8 +24,6 @@ function SendMessages(props) {
     setContent('');
   };
 
-  // Перенос строки при клике на shift+enter
-
   useHotkeys('shift+enter', (event) => {
     event.preventDefault();
     setContent((content) => content + '\n');
