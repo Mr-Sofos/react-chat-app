@@ -1,3 +1,37 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.send {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+
+.click {
+  cursor: pointer;
+  background-position: center;
+  transition: background 0.7s;
+}
+
+.click:hover {
+  background-color: #f8f5f5;
+  background-image: radial-gradient(circle, transparent 1%, #f8f5f5 1%);
+  background-size: 15000%;
+}
+
+.click:active {
+  transition: background 0s;
+  background-color: gray;
+  background-size: 100%;
+}
+
+.scrip {
+  width: 5%;
+  margin: 5px 22px 0 0;
+  cursor: pointer;
+  opacity: 0.5;
+}

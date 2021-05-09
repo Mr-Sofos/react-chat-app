@@ -1,0 +1,21 @@
+.form {
+    border-top: 1px solid lightgrey;
+    display: flex;
+}
+
+.sendForm {
+    line-height: 17px;
+    border: none;
+    outline: none;
+    width: 91%;
+    padding: 0 15px;
+    align-self: center;
+    overflow-wrap: break-word;
+    resize: none;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.send {
+
+}

@@ -20,6 +20,23 @@ export default function messages(state = initialState, action) {
         loading: false,
         items: action.payload,
       };
+
+    case "send/message/start":
+      return {
+        ...state,
+        items: [...state.items, action.payload],
+      };
+
+    case "send/message/success":
+      return {
+        ...state,
+        items: state.items.map((chat) => {
+          return {
+            ...chat,
+          };
+        }),
+      };
+
     case 'filter/messages':
       return {
         ...state,
@@ -48,6 +65,7 @@ export const loadMessages = (myId, contactId) => {
       });
   };
 };
+
 export const setFilterMessages = (text) => {
   return (dispatch) => {
     dispatch({
@@ -56,3 +74,31 @@ export const setFilterMessages = (text) => {
     });
   };
 };
+
+export const sendMessage = (contactId, myId, content) => {
+  return (dispatch) => {
+    dispatch({
+      type: "send/message/start",
+      payload: { contactId, myId, content, type: "text" },
+    });
+    fetch("https://api.intocode.ru:8001/api/messages", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        myId,
+        contactId,
+        content,
+        type: "text",
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        dispatch({
+          type: "send/message/success",
+        });
+      });
+  };
+}

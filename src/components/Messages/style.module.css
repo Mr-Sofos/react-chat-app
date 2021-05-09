@@ -2,18 +2,21 @@
   width: 55vw;
   align-self: center;
 }
+
 .PreloaderChatMessages {
   align-items: center;
   font-size: 22px;
   font-weight: 500;
   text-align: center;
 }
+
 .wrapLoaderAndText {
   width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .preloaderHeader {
   margin-right: 10px;
   align-items: center;
@@ -22,14 +25,17 @@
   height: 30px;
   line-height: 30px;
 }
+
 .autorenewPreloaderHeader {
   margin-top: 3px;
 }
+
 .headloadertext {
   font-size: 18px;
   font-weight: 500;
   padding: 0 5px;
 }
+
 @keyframes loaderHeader {
   0% {
     transform: rotate(0deg);
@@ -38,17 +44,19 @@
     transform: rotate(360deg);
   }
 }
+
 .messages {
-  margin: 0 30px;
-  width: 50vw;
-  height: 100vh;
+  flex: 3;
+  position: relative;
 }
+
 .SearchAndInput {
   width: 280px;
   height: 28px;
   align-items: center;
   display: flex;
 }
+
 .InputHeaderMessages input {
   height: 28px;
   font-size: 14px;
@@ -59,37 +67,45 @@
   line-height: 28px;
   width: 120px;
 }
+
 .iconSearchMessages {
   cursor: pointer;
   color: silver;
   font-size: 22px;
 }
+
 .AiOutlineSearch {
   margin-top: 3px;
 }
+
 .clear {
   cursor: pointer;
   font-size: 22px;
 }
+
 .clear .clearSerch {
   margin-top: 4px;
   color: silver;
 }
+
 .settingsHeaderMessages {
   cursor: pointer;
   width: 280px;
   text-align: right;
 }
+
 .settingsHeaderMessages .openProfile {
   text-align: right;
   margin-top: 5px;
   font-size: 22px;
   color: silver;
 }
+
 .headerName {
   font-size: 20px;
   font-weight: 500;
 }
+
 .headerNameAndOnline {
   width: 280px;
   text-align: center;
@@ -97,24 +113,28 @@
   align-items: center;
   display: flex;
 }
+
 .messagesHeaderOnline {
   font-size: 10px;
   margin-left: 10px;
   color: #00ff35;
 }
+
 .headerMessages {
   align-items: center;
   display: flex;
   border-bottom: 1px solid silver;
   padding: 10px 10px;
 }
+
 .messagesBody {
-  height: 90vh;
+  height: 83vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   margin: auto;
 }
+
 .messagesBody::-webkit-scrollbar {
   width: 0;
 }
