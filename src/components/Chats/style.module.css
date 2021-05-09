@@ -20,7 +20,7 @@
 .search {
   background-color: white;
   color: silver;
-  width: 85%;
+  width: 90%;
   padding: 10px;
   margin: 20px auto 40px;
   display: flex;
@@ -39,9 +39,9 @@
 }
 
 .contact {
-  width: 85%;
+  width: 90%;
   height: 50px;
-  margin: auto;
+  margin: 0 auto 5px auto;
   padding: 16px 10px;
   border-radius: 5px;
   transition: 0.2s;
@@ -85,12 +85,6 @@
   font-size: 15px;
   color: dimgray;
   opacity: 0.6;
-}
-
-img {
-  background-size: cover;
-  width: 50px;
-  border-radius: 50%;
 }
 
 .time {
