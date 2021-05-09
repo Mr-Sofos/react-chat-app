@@ -6,7 +6,7 @@ const initialState = {
 
 export default function application(state = initialState, action) {
   switch (action.type) {
-    case 'profile/OpenAndDelete':
+    case 'profile/OpenOrClose':
       return {
         ...state,
         openProfile: !state.openProfile,
@@ -31,7 +31,7 @@ export default function application(state = initialState, action) {
 
 // тут экшн креэйторы
 export function profileContactOpen() {
-  return { type: 'profile/OpenAndDelete' };
+  return { type: 'profile/OpenOrClose' };
 }
 
 // тут санки

@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.module.css';
 
-function Media(props) {
+function Media() {
   return (
     <div className={style.profileMedia}>
       <div className={style.headMedia}>Media</div>

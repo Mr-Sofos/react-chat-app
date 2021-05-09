@@ -5,9 +5,9 @@ import Skeleton from 'react-loading-skeleton';
 function SkeletonLoader(props) {
   const skeleton = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  return skeleton.map(() => {
+  return skeleton.map((index) => {
     return (
-      <div className={style.contact}>
+      <div className={style.contact} key={index}>
         <Skeleton width={50} height={50} circle={true} />
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>

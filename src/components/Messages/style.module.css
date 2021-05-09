@@ -9,8 +9,9 @@
   text-align: center;
 }
 .wrapLoaderAndText {
-  margin-right: 20px;
+  width: 280px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .preloaderHeader {
@@ -43,7 +44,7 @@
   height: 100vh;
 }
 .SearchAndInput {
-  width: 180px;
+  width: 280px;
   height: 28px;
   align-items: center;
   display: flex;
@@ -76,8 +77,11 @@
 }
 .settingsHeaderMessages {
   cursor: pointer;
+  width: 280px;
+  text-align: right;
 }
 .settingsHeaderMessages .openProfile {
+  text-align: right;
   margin-top: 5px;
   font-size: 22px;
   color: silver;
@@ -87,36 +91,22 @@
   font-weight: 500;
 }
 .headerNameAndOnline {
+  width: 280px;
+  text-align: center;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
 .messagesHeaderOnline {
   font-size: 10px;
-  margin-left: 15px;
+  margin-left: 10px;
   color: #00ff35;
-}
-.messagesHeaderOffline {
-  font-size: 10px;
-  margin-left: 15px;
-  color: #100f0f;
-}
-.messagesHeaderPreloaderOnline {
-  font-size: 10px;
-  margin-left: 15px;
-  color: #ffe600;
-}
-.messagesHeaderPreloaderOffline {
-  font-size: 10px;
-  margin-left: 15px;
-  color: #100f0f;
 }
 .headerMessages {
   align-items: center;
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid silver;
   padding: 10px 10px;
-  margin-bottom: 30px;
 }
 .messagesBody {
   height: 90vh;

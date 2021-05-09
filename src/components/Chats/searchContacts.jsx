@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilterText } from '../../redux/ducks/contacts';
 import { MdClear } from 'react-icons/all';
 import style from './style.module.css';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 function SearchContacts(props) {
   const dispatch = useDispatch();
@@ -15,6 +16,10 @@ function SearchContacts(props) {
   const handleSearch = (e) => {
     dispatch(setFilterText(e.target.value));
   };
+
+  useHotkeys('shift+t', () => {
+    dispatch(setFilterText(''));
+  });
 
   return (
     <>

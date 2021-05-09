@@ -23,12 +23,7 @@ function HeaderMessages({ filter }) {
           <AiOutlineSearch className={style.AiOutlineSearch} />
         </div>
         <div className={style.InputHeaderMessages}>
-          <input
-            type="text"
-            placeholder="Search messages"
-            onChange={handleSearch}
-            value={filter}
-          />
+          <input type="text" onChange={handleSearch} value={filter} />
         </div>
         <ClearSearchMessages filter={filter} />
       </div>
