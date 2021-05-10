@@ -1,5 +1,5 @@
 .selectChat {
-  width: 55vw;
+  width: 100%;
   align-self: center;
 }
 
@@ -123,6 +123,7 @@
 .headerMessages {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid silver;
   padding: 10px 10px;
 }

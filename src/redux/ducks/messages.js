@@ -21,13 +21,13 @@ export default function messages(state = initialState, action) {
         items: action.payload,
       };
 
-    case "send/message/start":
+    case 'send/message/start':
       return {
         ...state,
         items: [...state.items, action.payload],
       };
 
-    case "send/message/success":
+    case 'send/message/success':
       return {
         ...state,
         items: state.items.map((chat) => {
@@ -78,27 +78,27 @@ export const setFilterMessages = (text) => {
 export const sendMessage = (contactId, myId, content) => {
   return (dispatch) => {
     dispatch({
-      type: "send/message/start",
-      payload: { contactId, myId, content, type: "text" },
+      type: 'send/message/start',
+      payload: { contactId, myId, content, type: 'text' },
     });
-    fetch("https://api.intocode.ru:8001/api/messages", {
-      method: "POST",
+    fetch('https://api.intocode.ru:8001/api/messages', {
+      method: 'POST',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         myId,
         contactId,
         content,
-        type: "text",
+        type: 'text',
       }),
     })
       .then((response) => response.json())
       .then((json) => {
         dispatch({
-          type: "send/message/success",
+          type: 'send/message/success',
         });
       });
   };
-}
+};

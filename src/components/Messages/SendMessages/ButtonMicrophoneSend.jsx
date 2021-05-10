@@ -1,5 +1,5 @@
-import React from "react";
-import { CSSTransition, SwitchTransition } from "react-transition-group";
+import React from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { IoIosSend, TiMicrophone } from 'react-icons/all';
 
 function ButtonMicrophoneSend({ message, sentMessage }) {
