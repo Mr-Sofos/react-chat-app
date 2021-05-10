@@ -46,7 +46,7 @@ function SendMessages(props) {
         value={content}
         className={style.sendForm}
         placeholder="Write a message..."
-        maxRows="5"
+        maxrows="5"
       />
       <ButtonScrip />
       <ButtonMicrophoneSend
