@@ -20,6 +20,7 @@ function SendMessages(props) {
   };
 
   const sentMessage = () => {
+    if(content?.length === 0) return
     dispatch(sendMessage(opened, myId, content));
     setContent('');
   };
