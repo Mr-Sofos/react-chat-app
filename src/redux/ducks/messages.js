@@ -1,4 +1,4 @@
-import { scrollChatDown } from '../../components/utils/utils';
+import { scrollChatDown } from '../../components/utils/scrollMesagges';
 
 const initialState = {
   filter: '',
