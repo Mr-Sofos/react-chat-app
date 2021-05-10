@@ -19,7 +19,7 @@ function Inbox({ messages }) {
       <div className={style.inboxMessage}>
         <div className={style.content}>{messages.content}</div>
         <div className={style.date}>
-          {moment(messages.time).format('hh:mm')}
+          <div>{moment(messages.time).format('hh:mm')}</div>
         </div>
       </div>
     </div>

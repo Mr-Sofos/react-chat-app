@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './style.module.css';
 import moment from 'moment';
+import IsRead from './IsRead';
 
 function OutBox({ messages }) {
   return (
@@ -12,6 +13,7 @@ function OutBox({ messages }) {
           <div className={style.date}>
             {moment(messages.time).format('hh:mm')}
           </div>
+          <IsRead read={messages.read} />
         </div>
       </div>
     </div>

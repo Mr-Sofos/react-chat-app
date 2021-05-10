@@ -20,6 +20,7 @@ function SendMessages(props) {
   };
 
   const sentMessage = () => {
+    if(content?.length === 0) return
     dispatch(sendMessage(opened, myId, content));
     setContent('');
   };
@@ -45,7 +46,7 @@ function SendMessages(props) {
         value={content}
         className={style.sendForm}
         placeholder="Write a message..."
-        maxRows="5"
+        maxrows="5"
       />
       <ButtonScrip />
       <ButtonMicrophoneSend

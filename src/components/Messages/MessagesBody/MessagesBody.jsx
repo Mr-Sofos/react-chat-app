@@ -9,7 +9,7 @@ function MessagesBody({ filter, loading, messages }) {
   );
 
   return (
-    <div className={style.messagesBody}>
+    <div className={style.messagesBody} id="chat-window">
       {!loading &&
         filteredMessages.map((message, index) => {
           return <ItemMessages key={index} messages={message} />;

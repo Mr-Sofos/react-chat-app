@@ -1,3 +1,5 @@
+import { scrollChatDown } from '../../components/utils/scrollMesagges';
+
 const initialState = {
   filter: '',
   loading: true,
@@ -62,6 +64,7 @@ export const loadMessages = (myId, contactId) => {
           type: 'load/messages/success',
           payload: json,
         });
+        scrollChatDown();
       });
   };
 };
@@ -99,6 +102,7 @@ export const sendMessage = (contactId, myId, content) => {
         dispatch({
           type: 'send/message/success',
         });
+        scrollChatDown();
       });
   };
 };
