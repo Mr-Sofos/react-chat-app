@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Connection from './Connection';
 import Social from './Social';
 import Media from './Media';
+import PropTypes from 'prop-types';
 import Ava from './Ava';
 
 function Profile({ openProfileInfo }) {
@@ -17,7 +18,7 @@ function Profile({ openProfileInfo }) {
   return (
     <div className={openProfile ? style['profileOpen'] : style['profileClose']}>
       <div className={style.childProfile}>
-        <Ava size={style.small} radius={10} nameLetter={profile?.fullname[0]} />
+        <Ava size={style.large} radius={50} nameLetter={profile?.fullname[0]}/>
         <div className={style.profileNameEmail}>
           <div className={style.profileName}>{profile?.fullname}</div>
           <div className={style.nick}>@{profile?.username}</div>
@@ -29,5 +30,9 @@ function Profile({ openProfileInfo }) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  openProfileInfo: PropTypes.string,
+};
 
 export default Profile;

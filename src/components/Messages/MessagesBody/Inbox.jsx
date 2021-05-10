@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
@@ -24,5 +25,9 @@ function Inbox({ messages }) {
     </div>
   );
 }
+
+Inbox.propTypes = {
+  messages: PropTypes.object,
+};
 
 export default Inbox;

@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.css';
+import PropTypes from 'prop-types';
 import {
   AiOutlineInstagram,
   AiOutlineTwitter,
@@ -38,5 +39,9 @@ function Social({ socials }) {
     </div>
   );
 }
+
+Social.propTypes = {
+  socials: PropTypes.object,
+};
 
 export default Social;

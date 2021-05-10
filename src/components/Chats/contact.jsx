@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './style.module.css';
 import { Link, useParams } from 'react-router-dom';
 import Avatar from '../App/Avatar/Avatar';
 import moment from 'moment';
 
-function Contact(props) {
+function Contact({ contact }) {
   const openContactId = useParams()._id;
 
   const cutMessage = (text) => {
@@ -15,27 +16,31 @@ function Contact(props) {
   };
 
   return (
-    <Link className={style.link} to={`/${props.contact._id}`}>
+    <Link className={style.link} to={`/${contact._id}`}>
       <div
         className={`${style.contact}
-    ${props.contact._id === openContactId ? style.contactActive : ''}`}
+    ${contact._id === openContactId ? style.contactActive : ''}`}
       >
-        <Avatar contact={props.contact} />
+        <Avatar contact={contact} size={style.medium}/>
 
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>
-            <div className={style.fullName}>{props.contact.fullname}</div>
+            <div className={style.fullName}>{contact.fullname}</div>
             <div className={style.lastMessage}>
-              {cutMessage(props.contact.lastMessage?.content)}
+              {cutMessage(contact.lastMessage?.content)}
             </div>
           </div>
           <div className={style.time}>
-            {moment(props.contact.lastMessage?.time).format('hh:mm')}
+            {moment(contact.lastMessage?.time).format('hh:mm')}
           </div>
         </div>
       </div>
     </Link>
   );
+}
+
+Contact.propTypes = {
+  contact: PropTypes.object,
 }
 
 export default Contact;

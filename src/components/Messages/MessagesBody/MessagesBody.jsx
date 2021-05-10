@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from '../style.module.css';
 import ItemMessages from './ItemMessages';
 
@@ -16,5 +17,11 @@ function MessagesBody({ filter, loading, messages }) {
     </div>
   );
 }
+
+MessagesBody.propTypes = {
+  filter: PropTypes.string,
+  loading: PropTypes.bool,
+  messages: PropTypes.array,
+};
 
 export default MessagesBody;
