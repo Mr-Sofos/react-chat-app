@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './style.module.css';
 import moment from 'moment';
 import IsRead from './IsRead';
@@ -20,5 +21,9 @@ function OutBox({ messages }) {
     </div>
   );
 }
+
+OutBox.propTypes = {
+  messages: PropTypes.object,
+};
 
 export default OutBox;

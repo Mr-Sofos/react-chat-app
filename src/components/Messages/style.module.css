@@ -11,7 +11,7 @@
 }
 
 .wrapLoaderAndText {
-  width: 280px;
+  margin-right: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,19 +51,19 @@
 }
 
 .SearchAndInput {
-  width: 280px;
+  width: 160px;
   height: 28px;
   align-items: center;
   display: flex;
 }
 
 .InputHeaderMessages input {
+  padding-left: 5px;
   height: 28px;
   font-size: 14px;
   color: silver;
   border: none;
   outline: none;
-  padding-left: 16px;
   line-height: 28px;
   width: 120px;
 }
@@ -90,7 +90,6 @@
 
 .settingsHeaderMessages {
   cursor: pointer;
-  width: 280px;
   text-align: right;
 }
 
@@ -107,7 +106,7 @@
 }
 
 .headerNameAndOnline {
-  width: 280px;
+  margin-right: 110px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -121,10 +120,16 @@
 }
 
 .headerMessages {
+  margin: auto;
+  width: 96.6%;
+  box-shadow: 0px 0px 10px 0px rgb(210, 209, 209);
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid silver;
+  border-top: none;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 10px 10px;
 }
 

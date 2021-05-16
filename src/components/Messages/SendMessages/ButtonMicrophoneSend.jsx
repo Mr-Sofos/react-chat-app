@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { IoIosSend, TiMicrophone } from 'react-icons/all';
 
@@ -15,5 +16,10 @@ function ButtonMicrophoneSend({ message, sentMessage }) {
     </button>
   );
 }
+
+ButtonMicrophoneSend.propTypes = {
+  message: PropTypes.bool,
+  sentMessage: PropTypes.func,
+};
 
 export default ButtonMicrophoneSend;
