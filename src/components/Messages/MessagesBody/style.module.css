@@ -1,5 +1,5 @@
 .inbox {
-  margin: 10px 10px;
+  margin: 10px 15px;
   display: flex;
   align-self: flex-start;
   max-width: 70%;
@@ -9,9 +9,9 @@
   word-wrap: break-word;
   word-break: break-word;
   align-self: flex-start;
-  background-color: #f7f8f9;
+  background-color: #e9f2fc;
   border-radius: 15px 15px 15px 0;
-  padding: 15px 15px 5px 15px;
+  padding: 12px;
   font-size: 0.95em;
   font-weight: 600;
 }
@@ -36,18 +36,21 @@
   word-wrap: break-word;
   word-break: break-word;
   color: white;
-  background-color: #633df8;
+  background-color: #1328e0;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08);
   margin: 10px 10px;
   border-radius: 15px 15px 0 15px;
-  padding: 15px 15px 0 15px;
+  padding: 12px;
   font-size: 0.95em;
+}
+
+.wrapDateCheck {
+  width: 100px;
 }
 
 .dateCheck {
   display: flex;
   justify-content: right;
-  margin-left: 120px;
 }
 
 .infoBox {
