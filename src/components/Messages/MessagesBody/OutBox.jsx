@@ -2,6 +2,7 @@ import React from 'react';
 import style from './style.module.css';
 import moment from 'moment';
 import IsRead from './IsRead';
+import { GrFormClock } from 'react-icons/all';
 
 function OutBox({ messages }) {
 
@@ -13,7 +14,7 @@ function OutBox({ messages }) {
           <div className={style.date}>
             {moment(messages.time).format('hh:mm')}
           </div>
-          {messages.sending ? 'clock' : <IsRead read={messages.read} />}
+          {messages.sending ? <GrFormClock /> : <IsRead read={messages.read} />}
         </div>
       </div>
     </div>
