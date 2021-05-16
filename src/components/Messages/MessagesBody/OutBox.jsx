@@ -4,6 +4,7 @@ import moment from 'moment';
 import IsRead from './IsRead';
 
 function OutBox({ messages }) {
+
   return (
     <div className={style.outBox}>
       <div className={style.outBoxMessage}>
@@ -12,7 +13,7 @@ function OutBox({ messages }) {
           <div className={style.date}>
             {moment(messages.time).format('hh:mm')}
           </div>
-          <IsRead read={messages.read} />
+          {messages.sending ? 'clock' : <IsRead read={messages.read} />}
         </div>
       </div>
     </div>
