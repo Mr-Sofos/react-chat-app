@@ -8,7 +8,7 @@ function PreloaderNameAndOnlineMessages() {
       <div className={style.preloaderHeader}>
         <MdAutorenew className={style.autorenewPreloaderHeader} />
       </div>
-      <div className={style.headloadertext}>Загрузка чата...</div>
+      <div className={style.headloadertext}>Загрузка чата</div>
     </div>
   );
 }

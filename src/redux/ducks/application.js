@@ -48,17 +48,3 @@ export const loadMyId = () => {
       });
   };
 };
-export const loadProfileInfo = (myId, contactId) => {
-  return (dispatch) => {
-    dispatch({ type: 'load/profileInfo/start', payload: contactId });
-
-    fetch(`https://api.intocode.ru:8001/api/messages/${myId}/${contactId}`)
-      .then((response) => response.json())
-      .then((json) => {
-        dispatch({
-          type: 'load/profileInfo/success',
-          payload: json,
-        });
-      });
-  };
-};

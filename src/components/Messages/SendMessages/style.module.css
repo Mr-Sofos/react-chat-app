@@ -1,5 +1,8 @@
 .form {
-  border-top: 1px solid lightgrey;
+  width: 98.2%;
+  margin: auto;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
   display: flex;
 }
 
@@ -7,6 +10,7 @@
   line-height: 17px;
   border: none;
   outline: none;
+  font-size: 16px;
   width: 91%;
   padding: 0 15px;
   align-self: center;

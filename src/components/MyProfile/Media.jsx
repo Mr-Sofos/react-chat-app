@@ -5,7 +5,7 @@ function Media() {
     <>
       <div className={style.headMedia}>Media</div>
       <div className={style.ImgPdfMedia}>
-        <div className={style.imgMedia}/>
+        <div className={style.imgMedia} />
         <div className={style.pdf}>desktop-chat.pdf</div>
       </div>
     </>
