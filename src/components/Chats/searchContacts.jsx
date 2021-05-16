@@ -5,7 +5,7 @@ import { MdClear } from 'react-icons/all';
 import style from './style.module.css';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-function SearchContacts(props) {
+function SearchContacts() {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.contacts.filter);
 
