@@ -5,7 +5,7 @@ import Connection from './Connection';
 import Social from './Social';
 import Media from './Media';
 import PropTypes from 'prop-types';
-import Ava from './Ava';
+import Avatar from '../App/Avatar/Avatar';
 
 function Profile({ openProfileInfo }) {
   const openProfile = useSelector((state) => state.application.openProfile);
@@ -16,9 +16,9 @@ function Profile({ openProfileInfo }) {
   );
 
   return (
-    <div className={openProfile ? style['profileOpen'] : style['profileClose']}>
+    <div className={openProfile ? style.profileOpen : style.profileClose}>
       <div className={style.childProfile}>
-        <Ava size={style.large} radius={50} nameLetter={profile?.fullname[0]}/>
+        <Avatar contact={profile?.fullname[0]} size={'large'} />
         <div className={style.profileNameEmail}>
           <div className={style.profileName}>{profile?.fullname}</div>
           <div className={style.nick}>@{profile?.username}</div>

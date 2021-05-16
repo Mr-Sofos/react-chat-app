@@ -21,8 +21,11 @@ function Contact({ contact }) {
         className={`${style.contact}
     ${contact._id === openContactId ? style.contactActive : ''}`}
       >
-        <Avatar contact={contact} size={style.medium}/>
-
+        <Avatar
+          contact={contact.fullname?.[0]}
+          contactOnline={contact.online}
+          size={'medium'}
+        />
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>
             <div className={style.fullName}>{contact.fullname}</div>
@@ -41,6 +44,6 @@ function Contact({ contact }) {
 
 Contact.propTypes = {
   contact: PropTypes.object,
-}
+};
 
 export default Contact;

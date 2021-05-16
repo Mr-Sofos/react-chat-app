@@ -3,8 +3,9 @@
 }
 
 .profileOpen {
+  background: #f3f2f2;
   max-width: 300px;
-  padding: 50px 30px 0 30px;
+  padding: 50px 20px 0 20px;
   opacity: 1;
   transform: translateX(0%);
   transition: 0.4s;
@@ -17,64 +18,6 @@
   padding: 50px 0;
   transform: translateX(100%);
   transition: 0.4s;
-}
-
-.imgAvaProfile {
-  margin: auto;
-  background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));
-  height: 90px;
-  width: 90px;
-  text-align: center;
-  line-height: 90px;
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #f7f8f9;
-}
-.small {
-  /*margin: auto;*/
-  /*background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));*/
-  /*width: 30px;*/
-  /*height: 30px;*/
-  /*text-align: center;*/
-  /*line-height: 40px;*/
-  /*font-size: 14px;*/
-  /*margin-bottom: 30px;*/
-  /*color: #f7f8f9;*/
-
-}
-
-.medium {
-/*  margin: auto;*/
-/*  background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));*/
-/*  width: 50px;*/
-/*  height: 50px;*/
-/*  text-align: center;*/
-/*  line-height: 50px;*/
-/*  font-size: 20px;*/
-/*  margin-bottom: 30px;*/
-/*  color: #f7f8f9;*/
-/*}*/
-  background: linear-gradient(180deg, rgb(0, 136, 255) 36%, rgb(57, 221, 226));
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.large {
-  margin: auto;
-  background: linear-gradient(rgb(0, 136, 255) 36%, rgb(57, 221, 226));
-  height: 90px;
-  width: 90px;
-  text-align: center;
-  line-height: 90px;
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #f7f8f9;
 }
 
 .profileNameEmail {
@@ -92,7 +35,7 @@
   text-align: center;
   font-size: 18px;
   font-weight: 400;
-  color: silver;
+  color: #999999;
   margin-bottom: 28px;
 }
 
@@ -138,6 +81,7 @@
   width: 200px;
   padding: 25px;
   display: flex;
+  justify-content: space-between;
 }
 
 .wrapMessenger .instagram,
@@ -146,17 +90,32 @@
   display: flex;
 }
 
-.wrapIconsSocial {
+.IconsAndSocialNickname {
   align-items: center;
-}
-
-.IconsImg {
   font-size: 24px;
   color: #c3d9e2;
-  cursor: pointer;
   display: flex;
-  align-items: center;
-  padding-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.IconsAndSocialNickname span {
+  margin-left: 8px;
+}
+
+.IconsAndSocialNickname:hover {
+  background-color: #efefef;
+  transition: 0.3s;
+}
+
+.IconsAndSocialNickname:active {
+  background-color: #efefef;
+  transition: 0.3s;
+  color: lightskyblue;
 }
 
 .socialNickname {
@@ -179,6 +138,7 @@
   border-radius: 7px;
   background-color: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .imgMedia {
@@ -192,4 +152,10 @@
 .pdf {
   font-weight: 500;
   font-size: 18px;
+  color: #c3d9e2;
+}
+
+.ImgPdfMedia .pdf:active {
+  transition: 0.3s;
+  color: lightskyblue;
 }

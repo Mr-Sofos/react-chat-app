@@ -8,7 +8,7 @@ import ButtonScrip from './ButtonScrip';
 import ButtonMicrophoneSend from './ButtonMicrophoneSend';
 import style from './style.module.css';
 
-function SendMessages(props) {
+function SendMessages() {
   const dispatch = useDispatch();
   const myId = useSelector((state) => state.application.myId);
   const opened = useParams()._id;
@@ -20,7 +20,7 @@ function SendMessages(props) {
   };
 
   const sentMessage = () => {
-    if(content?.length === 0) return
+    if (content?.length === 0) return;
     dispatch(sendMessage(opened, myId, content));
     setContent('');
   };
