@@ -140,7 +140,7 @@
 }
 
 .messagesBody {
-  height: 90vh;
+  height: 86vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
