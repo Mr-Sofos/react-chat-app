@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from '../style.module.css';
-import { MdClear } from 'react-icons/all';
-import { setFilterMessages } from '../../../redux/ducks/messages';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { setFilterMessages } from '../../../redux/ducks/messages';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { MdClear } from 'react-icons/all';
+import style from '../style.module.css';
 
 function ClearSearchMessages({ filter }) {
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ function ClearSearchMessages({ filter }) {
   return (
     <div className={style.clear}>
       <span onClick={clearSearchMessages}>
-        {filter ? <MdClear className={style.clearSerch} /> : ''}
+        {filter ? <MdClear className={style.clearSearch} /> : ''}
       </span>
     </div>
   );

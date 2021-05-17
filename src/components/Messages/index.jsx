@@ -1,11 +1,11 @@
-import HeaderMessages from './HeaderMessages/HeaderMessages';
-import style from './style.module.css';
-import SendMessages from './SendMessages/SendMessages';
-import MessagesBody from './MessagesBody/MessagesBody';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { loadMessages } from '../../redux/ducks/messages';
-import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import MessagesBody from './MessagesBody/MessagesBody';
+import SendMessages from './SendMessages/SendMessages';
+import HeaderMessages from './HeaderMessages/HeaderMessages';
+import style from './style.module.css';
 
 function Messages() {
   const dispatch = useDispatch();

@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './style.module.css';
 import { Link, useParams } from 'react-router-dom';
-import Avatar from '../App/Avatar/Avatar';
+import PropTypes from 'prop-types';
 import moment from 'moment';
+import Avatar from '../App/Avatar/Avatar';
+import style from './style.module.css';
 
 function Contact({ contact }) {
   const openContactId = useParams()._id;
@@ -27,7 +26,7 @@ function Contact({ contact }) {
           size={'medium'}
         />
         <div className={style.contentBlock}>
-          <div className={style.fullNameLastMessage}>
+          <div>
             <div className={style.fullName}>{contact.fullname}</div>
             <div className={style.lastMessage}>
               {cutMessage(contact.lastMessage?.content)}

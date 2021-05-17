@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { TextareaAutosize } from '@material-ui/core';
 import { sendMessage } from '../../../redux/ducks/messages';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { TextareaAutosize } from '@material-ui/core';
 import ButtonScrip from './ButtonScrip';
 import ButtonMicrophoneSend from './ButtonMicrophoneSend';
 import style from './style.module.css';
 
 function SendMessages() {
   const dispatch = useDispatch();
-  const myId = useSelector((state) => state.application.myId);
   const opened = useParams()._id;
+  const myId = useSelector((state) => state.application.myId);
 
   const [content, setContent] = useState('');
 

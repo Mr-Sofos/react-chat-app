@@ -1,12 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.module.css';
 import moment from 'moment';
-import IsRead from './IsRead';
 import { GrFormClock } from 'react-icons/all';
+import IsRead from './IsRead';
+import style from './style.module.css';
 
 function OutBox({ messages }) {
-
   return (
     <div className={style.outBox}>
       <div className={style.outBoxMessage}>

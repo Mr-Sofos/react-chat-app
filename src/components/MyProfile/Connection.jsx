@@ -1,6 +1,5 @@
-import React from 'react';
-import style from './style.module.css';
 import { IoMdVideocam, IoMdCall, FaEnvelope } from 'react-icons/all';
+import style from './style.module.css';
 
 function Connection() {
   return (
@@ -8,7 +7,7 @@ function Connection() {
       <div className={style.phone}>
         <IoMdCall />
       </div>
-      <div className={style.videocam}>
+      <div className={style.videoCam}>
         <IoMdVideocam />
       </div>
       <div className={style.envelope}>

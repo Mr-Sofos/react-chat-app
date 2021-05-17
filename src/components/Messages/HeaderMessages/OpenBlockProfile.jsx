@@ -1,9 +1,8 @@
-import React from 'react';
-import style from '../style.module.css';
-import { IoSettingsSharp } from 'react-icons/all';
 import { useDispatch } from 'react-redux';
 import { profileContactOpen } from '../../../redux/ducks/application';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { IoSettingsSharp } from 'react-icons/all';
+import style from '../style.module.css';
 
 function OpenBlockProfile() {
   const dispatch = useDispatch();

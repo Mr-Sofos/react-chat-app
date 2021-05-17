@@ -1,11 +1,11 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { loadMyId } from '../../redux/ducks/application';
 import Chats from '../Chats';
 import Messages from '../Messages';
 import MyProfile from '../MyProfile';
 import style from './../App/style.module.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { loadMyId } from '../../redux/ducks/application';
 
 function App() {
   const dispatch = useDispatch();

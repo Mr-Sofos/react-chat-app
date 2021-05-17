@@ -1,11 +1,11 @@
-import { AiOutlineSearch } from 'react-icons/all';
-import style from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { loadContacts } from '../../redux/ducks/contacts';
+import { AiOutlineSearch } from 'react-icons/all';
 import Contact from './contact';
 import SkeletonLoader from './skeletonLoader';
 import SearchContacts from './searchContacts';
+import style from './style.module.css';
 
 function Chats() {
   const contacts = useSelector((state) => state.contacts.items);
@@ -32,7 +32,6 @@ function Chats() {
           <SearchContacts contacts={contacts} />
         </div>
       </div>
-
       {loader ? (
         <SkeletonLoader />
       ) : (

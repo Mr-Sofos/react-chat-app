@@ -1,11 +1,10 @@
-import React from 'react';
-import style from './style.module.css';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Connection from './Connection';
 import Social from './Social';
 import Media from './Media';
-import PropTypes from 'prop-types';
 import Avatar from '../App/Avatar/Avatar';
+import style from './style.module.css';
 
 function Profile({ openProfileInfo }) {
   const openProfile = useSelector((state) => state.application.openProfile);

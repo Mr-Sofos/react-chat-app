@@ -1,8 +1,7 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { FaCircle } from 'react-icons/all';
 import style from '../style.module.css';
-import { useSelector } from 'react-redux';
 
 function MessagesHeaderName() {
   const openProfileName = useParams()._id;

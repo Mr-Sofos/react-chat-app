@@ -1,4 +1,4 @@
-import { scrollChatDown } from '../../components/utils/scrollMesagges';
+import { scrollChatDown } from '../../components/utils/scrollMessagges';
 
 const initialState = {
   filter: '',
@@ -8,8 +8,6 @@ const initialState = {
 };
 
 export default function messages(state = initialState, action) {
-
-
   switch (action.type) {
     case 'load/messages/start':
       return {
@@ -29,7 +27,7 @@ export default function messages(state = initialState, action) {
       const tempMessage = {
         ...action.payload,
         sending: true,
-      }
+      };
       return {
         ...state,
         items: [...state.items, tempMessage],
@@ -59,10 +57,6 @@ export default function messages(state = initialState, action) {
       return state;
   }
 }
-
-// тут экшн креэйторы
-
-// тут санки
 
 export const loadMessages = (myId, contactId) => {
   return (dispatch) => {

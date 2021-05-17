@@ -1,13 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from '../style.module.css';
-import { AiOutlineSearch } from 'react-icons/all';
-import MessagesHeaderName from './MessagesHeaderName';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { setFilterMessages } from '../../../redux/ducks/messages';
+import { AiOutlineSearch } from 'react-icons/all';
 import PreloaderNameAndOnlineMessages from './PreloaderNameAndOnlineMessages';
+import MessagesHeaderName from './MessagesHeaderName';
 import ClearSearchMessages from './ClearSearchMessages';
 import OpenBlockProfile from './OpenBlockProfile';
+import style from '../style.module.css';
 
 function HeaderMessages({ filter }) {
   const dispatch = useDispatch();

@@ -1,6 +1,5 @@
-import React from 'react';
-import style from './style.module.css';
 import Skeleton from 'react-loading-skeleton';
+import style from './style.module.css';
 
 function SkeletonLoader() {
   const skeleton = [1, 2, 3, 4, 5, 6, 7, 8, 9];
