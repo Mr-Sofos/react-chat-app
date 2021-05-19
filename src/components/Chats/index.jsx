@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { loadContacts } from '../../redux/ducks/contacts';
 import { AiOutlineSearch } from 'react-icons/all';
-import Contact from './contact';
-import SkeletonLoader from './skeletonLoader';
-import SearchContacts from './searchContacts';
+import Contact from './Contact';
+import SkeletonLoader from './SkeletonLoader';
+import SearchContacts from './SearchContacts';
 import style from './style.module.css';
 
 function Chats() {
@@ -24,14 +24,7 @@ function Chats() {
 
   return (
     <div className={style.chats}>
-      <div className={style.inputBlock}>
-        <div className={style.search}>
-          <div className="icon">
-            <AiOutlineSearch />
-          </div>
-          <SearchContacts contacts={contacts} />
-        </div>
-      </div>
+      <SearchContacts filter={filter} />
       {loader ? (
         <SkeletonLoader />
       ) : (
