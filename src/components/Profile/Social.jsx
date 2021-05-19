@@ -7,6 +7,7 @@ import {
 import style from './style.module.css';
 
 function Social({ socials }) {
+
   return (
     <div className={style.profileSocial}>
       <div className={style.headSocial}>Social</div>
@@ -45,7 +46,7 @@ function Social({ socials }) {
 }
 
 Social.propTypes = {
-  socials: PropTypes.object.isRequired,
+  socials: PropTypes.object,
 };
 
 export default Social;
