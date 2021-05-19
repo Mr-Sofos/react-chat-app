@@ -4,8 +4,9 @@ import { useHotkeys } from 'react-hotkeys-hook';
 import { AiOutlineSearch, MdClear } from 'react-icons/all'
 import style from './style.module.css';
 
-function SearchContacts({filter}) {
+function SearchContacts() {
   const dispatch = useDispatch();
+  const filter = useSelector((state) => state.contacts.filter);
 
   const handleDeleteText = () => {
     dispatch(setFilterText(''));
@@ -37,6 +38,7 @@ function SearchContacts({filter}) {
           </div>
         </div>
       </div>
+
 
   );
 }
