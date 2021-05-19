@@ -1,11 +1,10 @@
-import React from 'react';
-import style from './style.module.css';
 import PropTypes from 'prop-types';
 import {
   AiOutlineInstagram,
   AiOutlineTwitter,
   FaFacebookF,
 } from 'react-icons/all';
+import style from './style.module.css';
 
 function Social({ socials }) {
   return (

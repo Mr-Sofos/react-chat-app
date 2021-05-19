@@ -1,7 +1,6 @@
-import React from 'react';
-import style from './style.module.css';
-import { FaCircle } from 'react-icons/all';
 import PropTypes from 'prop-types';
+import { FaCircle } from 'react-icons/all';
+import style from './style.module.css';
 
 
 function Avatar({ size, contact, contactOnline }) {

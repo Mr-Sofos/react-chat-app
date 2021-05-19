@@ -4,12 +4,14 @@
 
 .profileOpen {
   background: #f3f2f2;
-  max-width: 300px;
+  max-width: 400px;
+  min-width: 200px;
   padding: 50px 20px 0 20px;
   opacity: 1;
   transform: translateX(0%);
   transition: 0.4s;
   transform-origin: right;
+  overflow-x: hidden;
 }
 
 .profileClose {
@@ -54,7 +56,7 @@
 
 .profileContactIcons .envelope:active,
 .phone:active,
-.videocam:active {
+.videoCam:active {
   color: lightskyblue;
   transition: backgound 0.1s;
 }

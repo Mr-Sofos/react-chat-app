@@ -30,7 +30,7 @@
   margin-top: 3px;
 }
 
-.headloadertext {
+.headLoaderText {
   font-size: 18px;
   font-weight: 500;
   padding: 0 5px;
@@ -83,7 +83,7 @@
   font-size: 22px;
 }
 
-.clear .clearSerch {
+.clear .clearSearch {
   margin-top: 4px;
   color: silver;
 }
@@ -92,12 +92,18 @@
   cursor: pointer;
   text-align: right;
 }
+.settingsHeaderMessages:active {
+  color: white;
+}
 
 .settingsHeaderMessages .openProfile {
   text-align: right;
   margin-top: 5px;
   font-size: 22px;
   color: silver;
+}
+.openProfile:active {
+  color: black;
 }
 
 .headerName {
@@ -134,7 +140,7 @@
 }
 
 .messagesBody {
-  height: 83vh;
+  height: 90vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;

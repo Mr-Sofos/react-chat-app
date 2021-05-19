@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
-import style from './style.module.css';
 import Avatar from '../../App/Avatar/Avatar';
+import style from './style.module.css';
 
 function Inbox({ messages }) {
   const opened = useParams()._id;

@@ -1,4 +1,4 @@
-import { scrollChatDown } from '../../components/utils/scrollMesagges';
+import { scrollChatDown } from '../../components/utils/scrollMessagges';
 
 const initialState = {
   filter: '',
@@ -24,18 +24,27 @@ export default function messages(state = initialState, action) {
       };
 
     case 'send/message/start':
+      const tempMessage = {
+        ...action.payload,
+        sending: true,
+      };
       return {
         ...state,
-        items: [...state.items, action.payload],
+        items: [...state.items, tempMessage],
       };
 
     case 'send/message/success':
       return {
         ...state,
-        items: state.items.map((chat) => {
-          return {
-            ...chat,
-          };
+        items: state.items.map((item) => {
+          if (item._id === action.payload.ranId) {
+            return {
+              ...item,
+              sending: false,
+              _id: action.payload._id,
+            };
+          }
+          return item;
         }),
       };
 
@@ -48,10 +57,6 @@ export default function messages(state = initialState, action) {
       return state;
   }
 }
-
-// тут экшн креэйторы
-
-// тут санки
 
 export const loadMessages = (myId, contactId) => {
   return (dispatch) => {
@@ -69,20 +74,12 @@ export const loadMessages = (myId, contactId) => {
   };
 };
 
-export const setFilterMessages = (text) => {
-  return (dispatch) => {
-    dispatch({
-      type: 'filter/messages',
-      payload: text,
-    });
-  };
-};
-
 export const sendMessage = (contactId, myId, content) => {
   return (dispatch) => {
+    const ranId = Math.floor(Math.random() * 100) + 1;
     dispatch({
       type: 'send/message/start',
-      payload: { contactId, myId, content, type: 'text' },
+      payload: { ranId: ranId, contactId, myId, content, type: 'text' },
     });
     fetch('https://api.intocode.ru:8001/api/messages', {
       method: 'POST',
@@ -101,8 +98,18 @@ export const sendMessage = (contactId, myId, content) => {
       .then((json) => {
         dispatch({
           type: 'send/message/success',
+          payload: { ranId: ranId, ...json },
         });
         scrollChatDown();
       });
+  };
+};
+
+export const setFilterMessages = (text) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'filter/messages',
+      payload: text,
+    });
   };
 };

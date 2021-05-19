@@ -1,9 +1,8 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterText } from '../../redux/ducks/contacts';
+import { useHotkeys } from 'react-hotkeys-hook';
 import { MdClear } from 'react-icons/all';
 import style from './style.module.css';
-import { useHotkeys } from 'react-hotkeys-hook';
 
 function SearchContacts() {
   const dispatch = useDispatch();

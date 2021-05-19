@@ -1,6 +1,5 @@
-import React from 'react';
-import style from '../style.module.css';
 import { MdAutorenew } from 'react-icons/all';
+import style from '../style.module.css';
 
 function PreloaderNameAndOnlineMessages() {
   return (
@@ -8,7 +7,7 @@ function PreloaderNameAndOnlineMessages() {
       <div className={style.preloaderHeader}>
         <MdAutorenew className={style.autorenewPreloaderHeader} />
       </div>
-      <div className={style.headloadertext}>Загрузка чата</div>
+      <div className={style.headLoaderText}>Загрузка чата</div>
     </div>
   );
 }

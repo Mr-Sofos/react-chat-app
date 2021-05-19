@@ -1,9 +1,12 @@
 .form {
   width: 98.2%;
+  position: sticky;
   margin: auto;
+  bottom: 2px;
   border: 1px solid lightgrey;
   border-radius: 5px;
   display: flex;
+  background-color: white;
 }
 
 .sendForm {
@@ -18,7 +21,4 @@
   resize: none;
   word-wrap: break-word;
   word-break: break-word;
-}
-
-.send {
 }

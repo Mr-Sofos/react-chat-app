@@ -29,12 +29,10 @@ export default function application(state = initialState, action) {
   }
 }
 
-// тут экшн креэйторы
 export function profileContactOpen() {
   return { type: 'profile/OpenOrClose' };
 }
 
-// тут санки
 export const loadMyId = () => {
   return (dispatch) => {
     dispatch({ type: 'load/profile/start' });

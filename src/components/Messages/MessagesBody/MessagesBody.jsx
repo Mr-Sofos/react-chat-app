@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import style from '../style.module.css';
 import ItemMessages from './ItemMessages';
+import style from '../style.module.css';
 
 function MessagesBody({ filter, loading, messages }) {
   const filteredMessages = messages.filter((message) =>
