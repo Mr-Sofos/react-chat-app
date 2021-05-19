@@ -8,11 +8,11 @@ import style from './style.module.css';
 
 function Profile() {
   const openProfileInfo = useParams()._id;
+
   const openProfile = useSelector((state) => state.application.openProfile);
+
   const profile = useSelector((state) =>
-    state.contacts.items.find((item) => {
-      return openProfileInfo === item._id;
-    }),
+    state.contacts.items.find((item) => openProfileInfo === item._id),
   );
 
   return (

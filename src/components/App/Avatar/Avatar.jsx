@@ -15,9 +15,9 @@ function Avatar({ size, fullname, online }) {
 }
 
 Avatar.propTypes = {
-  size: PropTypes.string.isRequired,
-  fullname: PropTypes.string.isRequired,
-  online: PropTypes.bool.isRequired,
+  size: PropTypes.string,
+  fullname: PropTypes.object.isRequired,
+  online: PropTypes.bool,
 };
 
 Avatar.defaultProps = {
