@@ -14,8 +14,6 @@ function Inbox({ message }) {
     }),
   );
 
-  console.log(fullname);
-
   return (
     <div className={style.inbox}>
       <Avatar size={'small'} fullname={fullname} />
