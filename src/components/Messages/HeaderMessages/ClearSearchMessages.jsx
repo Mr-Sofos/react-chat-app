@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from '../style.module.css';
 import { MdClear } from 'react-icons/all';
 import { setFilterMessages } from '../../../redux/ducks/messages';
@@ -24,5 +25,9 @@ function ClearSearchMessages({ filter }) {
     </div>
   );
 }
+
+ClearSearchMessages.propTypes = {
+  filter: PropTypes.string,
+};
 
 export default ClearSearchMessages;

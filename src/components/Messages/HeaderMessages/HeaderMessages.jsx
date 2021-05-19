@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from '../style.module.css';
 import { AiOutlineSearch } from 'react-icons/all';
 import MessagesHeaderName from './MessagesHeaderName';
@@ -36,5 +37,9 @@ function HeaderMessages({ filter }) {
     </div>
   );
 }
+
+HeaderMessages.propTypes = {
+  filter: PropTypes.string,
+};
 
 export default HeaderMessages;

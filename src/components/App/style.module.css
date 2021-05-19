@@ -5,7 +5,7 @@
 
 .appWrapper {
   display: flex;
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 98vh;
 }

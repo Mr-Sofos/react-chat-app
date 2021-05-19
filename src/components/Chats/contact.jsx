@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './style.module.css';
 import { Link, useParams } from 'react-router-dom';
 import Avatar from '../App/Avatar/Avatar';
@@ -20,8 +21,11 @@ function Contact({ contact }) {
         className={`${style.contact}
     ${contact._id === openContactId ? style.contactActive : ''}`}
       >
-        <Avatar contact={contact} />
-
+        <Avatar
+          contact={contact.fullname?.[0]}
+          contactOnline={contact.online}
+          size={'medium'}
+        />
         <div className={style.contentBlock}>
           <div className={style.fullNameLastMessage}>
             <div className={style.fullName}>{contact.fullname}</div>
@@ -37,5 +41,9 @@ function Contact({ contact }) {
     </Link>
   );
 }
+
+Contact.propTypes = {
+  contact: PropTypes.object,
+};
 
 export default Contact;
