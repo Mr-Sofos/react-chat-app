@@ -20,7 +20,7 @@ function Contact({ contact }) {
         className={`${style.contact}
     ${contact._id === openContactId ? style.contactActive : ''}`}
       >
-        <Avatar size={'medium'} fullname={contact} online={contact.online} />
+        <Avatar size={'medium'} fullName={contact} online={contact.online} />
         <div className={style.contentBlock}>
           <div>
             <div className={style.fullName}>{contact.fullname}</div>

@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { loadContacts } from '../../redux/ducks/contacts';
-import { AiOutlineSearch } from 'react-icons/all';
-import Contact from './Contact';
-import SkeletonLoader from './SkeletonLoader';
-import SearchContacts from './SearchContacts';
 import style from './style.module.css';
+import Contact from '../Sidebar/Contact'
+import SkeletonLoader from '../Sidebar/SkeletonLoader'
+import SearchContacts from '../Sidebar/SearchContacts'
 
 function Chats() {
   const contacts = useSelector((state) => state.contacts.items);
