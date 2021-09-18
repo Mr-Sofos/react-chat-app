@@ -13,6 +13,7 @@ function SearchContacts() {
   };
 
   const handleSearch = (e) => {
+    e.preventDefault()
     dispatch(setFilterText(e.target.value));
   };
 

@@ -1,9 +1,9 @@
 .chats {
   background: #f3f2f2;
-  border-right: 1px solid #f3f2f2;
   min-width: 24vw;
   height: 100vh;
   overflow: scroll;
+  border-right: 1px solid #b6b6b6;
 }
 
 .chats::-webkit-scrollbar {
@@ -42,8 +42,7 @@
 
 .contact {
   width: 100%;
-  height: 90px;
-  margin: 0 auto 0 auto;
+  height: 80px;
   box-sizing: border-box;
   padding: 0 10px 0 10px;
   transition: 0.2s;
@@ -52,24 +51,17 @@
   position: relative;
 }
 
-.contactActive {
-  background-color: white;
-  transition: 0.2s;
-}
 
 .contact:hover {
   background-color: rgba(210, 210, 210, 0.4);
   transition: 0.2s;
 }
 
-.contactActive:hover {
-  background-color: white;
-}
 
 .fullName {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
   align-items: center;
+  font-weight: 600;
 }
 
 .link {
@@ -78,7 +70,7 @@
 }
 
 .contentBlock {
-  margin-left: 7px;
+  margin-left: 14px;
   display: flex;
   align-items: center;
   width: 85%;
@@ -86,14 +78,13 @@
 }
 
 .lastMessage {
-  font-size: 15px;
-  color: dimgray;
-  opacity: 0.6;
+  font-size: 13px;
+  opacity: .8;
 }
+
 
 .time {
   font-size: 13px;
-  color: dimgray;
   justify-content: end;
 }
 
@@ -102,4 +93,14 @@
   align-items: center;
   display: flex;
   font-size: 20px;
+}
+
+.contactActive {
+  background-color: rgba(41, 123, 255, 0.8);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.contactActive:hover {
+  background-color: rgba(41, 123, 255, 0.8);
 }
