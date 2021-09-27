@@ -23,7 +23,7 @@ function Messages() {
     return (
       <div className={style.selectChat}>
         <div className={style.PreloaderChatMessages}>
-          ⬅ Выбери чат, чтобы начать переписку
+          Select a chat to start messaging
         </div>
       </div>
     );

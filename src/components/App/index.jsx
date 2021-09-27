@@ -19,9 +19,9 @@ function App() {
     !loading && (
       <div className={style.appWrapper}>
         <BrowserRouter>
-          <Route path="/:_id?">
+              <Route path="/:_id?">
             <Chats />
-            <Messages />
+               <Messages />
             <MyProfile />
           </Route>
         </BrowserRouter>

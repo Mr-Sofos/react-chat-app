@@ -7,6 +7,7 @@ import { TextareaAutosize } from '@material-ui/core';
 import ButtonScrip from './ButtonScrip';
 import ButtonMicrophoneSend from './ButtonMicrophoneSend';
 import style from './style.module.css';
+import { GrEmoji } from 'react-icons/all'
 
 function SendMessages() {
   const dispatch = useDispatch();

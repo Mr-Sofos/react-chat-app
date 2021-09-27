@@ -4,10 +4,15 @@
 }
 
 .PreloaderChatMessages {
-  align-items: center;
-  font-size: 22px;
-  font-weight: 500;
+  width: 350px;
+  letter-spacing: 0.8px;
+  padding: 3px;
+  margin: auto;
+  font-size: 19px;
   text-align: center;
+  border-radius: 18px;
+  font-weight: 500;
+  background: rgba(186, 186, 186, .3);
 }
 
 .wrapLoaderAndText {
@@ -51,7 +56,7 @@
 }
 
 .SearchAndInput {
-  width: 160px;
+  width: 200px;
   height: 28px;
   align-items: center;
   display: flex;
@@ -61,16 +66,19 @@
   padding-left: 5px;
   height: 28px;
   font-size: 14px;
-  color: silver;
-  border: none;
+  color: #898989;
   outline: none;
+  border-top: none ;
+  border-left:none;
+  border-right: none;
   line-height: 28px;
-  width: 120px;
+  width: 300px;
+  border-bottom: 1px solid #999999;
 }
 
 .iconSearchMessages {
   cursor: pointer;
-  color: silver;
+  color: #a3a3a3;
   font-size: 22px;
 }
 
@@ -85,7 +93,7 @@
 
 .clear .clearSearch {
   margin-top: 4px;
-  color: silver;
+  color: #c0c0c0;
 }
 
 .settingsHeaderMessages {
@@ -127,16 +135,13 @@
 
 .headerMessages {
   margin: auto;
-  width: 96.6%;
-  box-shadow: 0 0 10px 0 rgb(210, 209, 209);
+  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-top: none;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom: 1px solid #c9c9c9;
   padding: 10px 10px;
+  box-sizing: border-box;
 }
 
 .messagesBody {

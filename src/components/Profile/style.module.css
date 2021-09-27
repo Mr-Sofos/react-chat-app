@@ -9,7 +9,7 @@
   padding: 50px 20px 0 20px;
   opacity: 1;
   transform: translateX(0%);
-  transition: 0.4s;
+  transition: 0.2s;
   transform-origin: right;
   overflow-x: hidden;
 }
@@ -19,7 +19,7 @@
   max-width: 0;
   padding: 50px 0;
   transform: translateX(100%);
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .profileNameEmail {

@@ -8,8 +8,8 @@ function Contact({ contact }) {
   const openContactId = useParams()._id;
 
   const cutMessage = (text) => {
-    if (text?.length > 15) {
-      return text.substring(0, 15) + '...';
+    if (text?.length > 10) {
+      return text.substring(0, 10) + '...';
     }
     return text;
   };
@@ -18,7 +18,7 @@ function Contact({ contact }) {
     <Link className={style.link} to={`/${contact._id}`}>
       <div
         className={`${style.contact}
-    ${contact._id === openContactId ? style.contactActive : ''}`}
+        ${contact._id === openContactId && style.contactActive}`}
       >
         <Avatar size={'medium'} fullname={contact} online={contact.online} />
         <div className={style.contentBlock}>

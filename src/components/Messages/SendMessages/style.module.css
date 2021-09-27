@@ -1,12 +1,13 @@
 .form {
-  width: 98.2%;
+  width: 100%;
+  height: 50px;
   position: sticky;
   margin: auto;
   bottom: 2px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
+  border-top: 1px solid #b6b6b6;
   display: flex;
-  background-color: white;
+  align-items: center;
+  background-color: #fff;
 }
 
 .sendForm {
@@ -21,4 +22,30 @@
   resize: none;
   word-wrap: break-word;
   word-break: break-word;
+}
+
+.mediaIcon {
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  color: #929292;
+  font-size: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.mediaIcon:hover {
+  background: #dbdbdb;
+  transition: .2s;
+}
+
+.mediaIcon:active {
+  background: #ececec;
+  transition: .2s;
 }
